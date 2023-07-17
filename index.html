@@ -17,9 +17,9 @@
     <!-- end icon -->
   </head>
   <body>
-    <div class="bg-c-purple font-lilita-one">
+    <div class="bg-c-purple font-lilita-one selection:text-white selection:bg-c-pick-dark ">
       <!-- ==NAV TOP== -->
-      <nav class="fixed top-0 left-0 right-0 z-10">
+      <nav class="fixed top-0 left-0 right-0 z-[11]">
         <div class="h-8 bg-c-black overflow-hidden w-full">
           <div class="w-full h-full font-sans animate-[nav-move_5s_linear_infinite] flex md:animate-[nav-move_10s_linear_infinite] lg:animate-[nav-move_15s_linear_infinite]">
             <span class="font-bold text-orange-400 leading-8 w-full block shrink-0" >
@@ -34,13 +34,13 @@
         <header>
           <div iv class="mt-3 flex justify-between px-4">
             <!-- ==logo== -->
-            <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center">
-              <img src="./public/img/logo.svg" alt="" class="w-10 h-10" />
+            <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center md:w-12 md:h-12">
+              <img src="./public/img/logo.svg" alt="" class="w-10 h-10 md:w-8 md:h-8" />
             </div>
             <!-- end logo -->
             <!-- ==tab== -->
-            <div class="w-16 h-16 rounded-full bg-orange-400 grid place-content-center">
-              <label for="show-nav" class="text-2xl text-white">
+            <div class="md:hidden">
+              <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
                 <i class="fa-solid fa-bars"></i>
               </label>
             </div>
@@ -50,18 +50,18 @@
             />
             <!-- end input show nav -->
             <!-- ==nav== -->
-            <nav class="hidden peer-checked:block fixed top-0 h-screen w-screen bg-orange-200 left-0 overflow-auto scroll-hidden">
-              <div class="w-full flex justify-between px-6 pt-6">
+            <nav class="hidden peer-checked:block fixed top-0 left-0 right-0 bottom-0 bg-orange-200 overflow-auto scroll-hidden md:relative md:bg-transparent md:flex md:items-center md:overflow-visible">
+              <div class="w-full flex justify-between px-6 pt-6 md:hidden">
                 <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center">
                   <img src="./public/img/logo.svg" alt="" class="w-10 h-10" />
                 </div>
-                <div class="w-16 h-16 rounded-full bg-orange-400 grid place-content-center">
-                  <label for="show-nav" class="text-2xl text-white">
+                <div class="">
+                  <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
                     <i class="fa-solid fa-xmark"></i>
                   </label>
                 </div>
               </div>
-              <ul class="uppercase font-lilita-one w-full text-5xl px-6 py-12 flex flex-col gap-3">
+              <ul class="uppercase font-lilita-one text-5xl px-6 py-12 flex flex-col gap-3 md:flex-row md:justify-center md:items-center md:text-base md:bg-orange-400 md:py-1 md:px-2 md:rounded-full md:shrink-0 md:h-full">
                 <input type="radio" name="nav" hidden class="peer/all" checked id="all"/>
                 <input type="radio" name="nav" hidden class="peer/foxes" id="foxes"/>
                 <input type="radio" name="nav" hidden class="peer/utility" id="utility"/>
@@ -69,57 +69,88 @@
                 <input type="radio" name="nav" hidden class="peer/dens" id="dens"/>
                 <input type="radio" name="nav" hidden class="peer/merch" id="merch"/>
 
-                <li class="hidden peer-checked/all:block peer-checked/foxes:block relative group">
-                  <label class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxes:group-[]:bg-orange-400 peer-checked/foxes:group-[]:text-orange-100" for="foxes">Foxes</label>
+                <li class="hidden peer-checked/all:block peer-checked/foxes:block relative group md:block">
+                  <label 
+                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxes:group-[]:bg-orange-400 peer-checked/foxes:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                    for="foxes">
+                    Foxes
+                  </label>
                   <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxes:group-[]:block">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <i class="fa-solid fa-chevron-left"></i>
+                      <span class="md:hidden">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </span>
                     </span>
                   </label>
                 </li>
-                <li class="hidden peer-checked/all:block peer-checked/utility:block relative group">
-                  <label class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/utility:group-[]:bg-orange-400 peer-checked/utility:group-[]:text-orange-100" for="utility">Utility</label>
+                <li class="hidden peer-checked/all:block peer-checked/utility:block relative group md:block">
+                  <label 
+                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/utility:group-[]:bg-orange-400 peer-checked/utility:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                    for="utility">
+                    Utility
+                  </label>
                   <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/utility:group-[]:block">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <i class="fa-solid fa-chevron-left"></i>
+                      <span class="md:hidden">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </span>
                     </span>
                   </label>
                 </li>
-                <li class="hidden peer-checked/all:block peer-checked/foxy:block relative group">
-                  <label class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxy:group-[]:bg-orange-400 peer-checked/foxy:group-[]:text-orange-100" for="foxy">$Foxy</label>
+                <li class="hidden peer-checked/all:block peer-checked/foxy:block relative group md:block">
+                  <label 
+                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxy:group-[]:bg-orange-400 peer-checked/foxy:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                    for="foxy">
+                    $Foxy
+                  </label>
                   <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxy:group-[]:block">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <i class="fa-solid fa-chevron-left"></i>
+                      <span class="md:hidden">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </span>
                     </span>
                   </label>
                 </li>
-                <li class="hidden peer-checked/all:block peer-checked/dens:block relative group">
-                  <label class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/dens:group-[]:bg-orange-400 peer-checked/dens:group-[]:text-orange-100" for="dens">Dens</label>
+                <li class="hidden peer-checked/all:block peer-checked/dens:block relative group md:block">
+                  <label 
+                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/dens:group-[]:bg-orange-400 peer-checked/dens:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                    for="dens">
+                    Dens
+                  </label>
                   <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/dens:group-[]:block">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <i class="fa-solid fa-chevron-left"></i>
+                      <span class="md:hidden">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </span>
                     </span>
                   </label>
                 </li>
-                <li class="hidden peer-checked/all:block peer-checked/merch:block relative group">
-                  <label class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/merch:group-[]:bg-orange-400 peer-checked/merch:group-[]:hover:text-orange-100" for="merch">Merch</label>
+                <li class="hidden peer-checked/all:block peer-checked/merch:block relative group md:block">
+                  <label 
+                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/merch:group-[]:bg-orange-400 peer-checked/merch:group-[]:hover:text-orange-100 md:text-white md:py-1 md:px-4" 
+                    for="merch">
+                    Merch
+                  </label>
                   <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/merch:group-[]:block">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <i class="fa-solid fa-chevron-left"></i>
+                      <span class="md:hidden">
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </span>
                     </span>
                   </label>
                 </li>
 
                 <!-- == DETAIL NAV === -->
                 <!-- ==foxes== -->
-                <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:flex flex-col gap-3">
+                <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:flex flex-col gap-3 md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 md:z-10 md:w-11/12 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-4 md:flex-row md:flex-wrap">
+                  
                   <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                    <div class="w-12 h-12 rounded-full bg-orange-400 grid  place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
                       <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
                     </div>
                     <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl">my profile</span>
-                      <span class="block text-start font-sans text-sm font-medium">Your wallets and socials</span>
+                      <span class="block text-start font-gaegu text-2xl md:text-lg">my profile</span>
+                      <span class="block text-start font-sans text-sm font-medium md:text-xs">Your wallets and socials</span>
                     </div>
                   </li>
 
@@ -181,26 +212,27 @@
 
                 <!-- END DETAIL NAV -->
               </ul>
-              <div class="flex justify-center">
-                <button class="uppercase w-full rounded-full mx-3 py-4 bg-orange-400 text-lg font-lilita-one text-white">
-                  <span class="text-slate-200 mr-2">
+              <div class="flex justify-center md:h-full">
+                <button class="uppercase rounded-full mx-3 py-4 bg-orange-400 text-lg font-lilita-one w-full h-fit justify-center text-white flex md:text-base md:w-fit md:shrink-0 md:py-0 md:h-full md:flex md:items-center px-2">
+                  <span class="text-slate-200 mr-2 md:hidden">
                     <i class="fa-solid fa-plug"></i>
                   </span>
-                  <span> Connect wallet </span>
+                  <span class="whitespace-normal">Connect wallet</>
                 </button>
               </div>
+              <div class="md:hidden">
+                <div class="py-20 text-6xl flex justify-evenly mt-2">
+                  <span class="text-indigo-600">
+                    <i class="fa-brands fa-discord"></i>
+                  </span>
+                  <span class="text-blue-400">
+                    <i class="fa-brands fa-twitter"></i>
+                  </span>
+                </div>
 
-              <div class="py-20 text-6xl flex justify-evenly mt-2">
-                <span class="text-indigo-600">
-                  <i class="fa-brands fa-discord"></i>
-                </span>
-                <span class="text-blue-400">
-                  <i class="fa-brands fa-twitter"></i>
-                </span>
-              </div>
-
-              <div class="font-lilita-one px-8 py-4 mb-6 text-lg text-orange-500 underline">
-                Terms & Conditions
+                <div class="font-lilita-one px-8 py-4 mb-6 text-lg text-orange-500 underline">
+                  Terms & Conditions
+                </div>
               </div>
             </nav>
             <!-- end nav -->
@@ -211,11 +243,11 @@
       <!-- END NAV TOP -->
       <main>
         <!-- ==background== -->
-        <div class="h-72 relative mt-8">
-          <div class="w-full h-full bg-gradient-to-t from-c-purple to-transparent absolute z-[10]"></div>
-          <img src="./public/img/bg-1.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover bg-bottom opacity-0 animate-[show-1_7s_linear_infinite]" >
-          <img src="./public/img/bg-2.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover bg-bottom opacity-0 animate-[show-2_7s_linear_infinite]" >
-          <img src="./public/img/bg-3.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover bg-bottom opacity-0 animate-[show-3_7s_linear_infinite]" >
+        <div class="h-72 relative mt-8 overflow-hidden">
+          <div class="w-full h-full bg-gradient-to-t from-c-purple to-transparent absolute z-[10] "></div>
+          <img src="./public/img/bg-1.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-right bg-bottom opacity-0 animate-[show-1_16s_linear_infinite]" >
+          <img src="./public/img/bg-2.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-left bg-bottom opacity-0 animate-[show-2_16s_linear_infinite]" >
+          <img src="./public/img/bg-3.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-top-right bg-bottom opacity-0 animate-[show-3_16s_linear_infinite]" >
         </div>
         <!-- end background -->
 
@@ -293,7 +325,7 @@
                       <span class="text-sm">Collection Size</span>
                     </div>
                   </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8">
+                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
                     <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-white"><i class="fa-solid fa-info"></i></span>
                     <span class="text-xl">Learn More</span>
                   </div>
@@ -324,7 +356,7 @@
                       <span class="text-sm">Collection Size</span>
                     </div>
                   </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8">
+                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
                     <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-c-pick-dark"><i class="fa-solid fa-info"></i></span>
                     <span class="text-xl">Learn More</span>
                   </div>
@@ -355,7 +387,7 @@
                       <span class="text-sm"></span>
                     </div>
                   </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8">
+                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
                     <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-white"><i class="fa-solid fa-info"></i></span>
                     <span class="text-xl">Learn More</span>
                   </div>
@@ -386,7 +418,7 @@
                       <span class="text-sm">Collection Size</span>
                     </div>
                   </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8">
+                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
                     <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-white"><i class="fa-solid fa-info"></i></span>
                     <span class="text-xl">Learn More</span>
                   </div>

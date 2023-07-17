@@ -46,29 +46,41 @@ module.exports = {
           "0%, 90%": {
             opacity: "0",
           },
-          "100%": { opacity: "100%" },
+          "100%": {
+            opacity: "100%",
+          },
         },
         "show-1": {
-          "0%": {
+          "0%, 34%, 100%": {
             opacity: "0",
+            transform: "scale(100%)",
+            
           },
-          "33%": { opacity: "50%" },
-          "34%, 100%": { opacity: "0%" },
+          "33%": {
+            opacity: "50%",
+            transform: "scale(105%)",
+          },
         },
         "show-2": {
-          "0%, 33%": {
+          "0%, 33%, 67%, 100%": {
             opacity: "0",
+            transform: "scale(100%)",
           },
-
-          "66%": { opacity: "50%" },
-          "67%, 100%": { opacity: "0%" },
+         
+          "66%": {
+            opacity: "50%",
+            transform: "scale(105%)",
+          },
         },
         "show-3": {
-          "0%": {
+          "0%, 66%": {
             opacity: "0",
+            transform: "scale(100%)",
           },
-          "66%": { opacity: "0%" },
-          "67%, 100%": { opacity: "50%" },
+          "100%": {
+            opacity: "50%",
+            transform: "scale(105%)",
+          },
         },
         "move-bt": {
           "0%, 90%": {
