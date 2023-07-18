@@ -61,13 +61,13 @@
                   </label>
                 </div>
               </div>
-              <ul class="uppercase font-lilita-one text-5xl px-6 py-12 flex flex-col gap-3 md:flex-row md:justify-center md:items-center md:text-base md:bg-orange-400 md:py-1 md:px-2 md:rounded-full md:shrink-0 md:h-full">
-                <input type="radio" name="nav" hidden class="peer/all" checked id="all"/>
-                <input type="radio" name="nav" hidden class="peer/foxes" id="foxes"/>
-                <input type="radio" name="nav" hidden class="peer/utility" id="utility"/>
-                <input type="radio" name="nav" hidden class="peer/foxy" id="foxy"/>
-                <input type="radio" name="nav" hidden class="peer/dens" id="dens"/>
-                <input type="radio" name="nav" hidden class="peer/merch" id="merch"/>
+              <ul class="uppercase font-lilita-one text-5xl px-6 py-12 flex flex-col gap-3 md:flex-row md:justify-center md:items-center md:text-base md:bg-orange-400 md:py-1 md:px-2 md:rounded-full md:shrink-0 md:h-full ">
+                <input type="radio" name="nav" hidden class="peer/all" id="all" checked/>
+                <input type="radio" name="nav" hidden class="peer peer/foxes" id="foxes"/>
+                <input type="radio" name="nav" hidden class="peer peer/utility" id="utility"/>
+                <input type="radio" name="nav" hidden class="peer peer/foxy" id="foxy"/>
+                <input type="radio" name="nav" hidden class="peer peer/dens" id="dens"/>
+                <input type="radio" name="nav" hidden class="peer peer/merch" id="merch"/>
 
                 <li class="hidden peer-checked/all:block peer-checked/foxes:block relative group md:block">
                   <label 
@@ -75,7 +75,7 @@
                     for="foxes">
                     Foxes
                   </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxes:group-[]:block">
+                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxes:group-[]:block bg-orange-100/40 rounded-full">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
                       <span class="md:hidden">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -89,7 +89,7 @@
                     for="utility">
                     Utility
                   </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/utility:group-[]:block">
+                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/utility:group-[]:block bg-orange-100/40 rounded-full">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
                       <span class="md:hidden">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -103,7 +103,7 @@
                     for="foxy">
                     $Foxy
                   </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxy:group-[]:block">
+                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxy:group-[]:block bg-orange-100/40 rounded-full">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
                       <span class="md:hidden">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -117,7 +117,7 @@
                     for="dens">
                     Dens
                   </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/dens:group-[]:block">
+                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/dens:group-[]:block bg-orange-100/40 rounded-full">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
                       <span class="md:hidden">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -131,7 +131,7 @@
                     for="merch">
                     Merch
                   </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/merch:group-[]:block">
+                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/merch:group-[]:block bg-orange-100/40 rounded-full">
                     <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
                       <span class="md:hidden">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -141,74 +141,110 @@
                 </li>
 
                 <!-- == DETAIL NAV === -->
-                <!-- ==foxes== -->
-                <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:flex flex-col gap-3 md:absolute md:top-full md:left-1/2 md:-translate-x-1/2 md:z-10 md:w-11/12 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-4 md:flex-row md:flex-wrap">
-                  
-                  <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid  place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                      <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                <div class="group/nav md:absolute md:top-full md:left-0 md:z-10 md:w-[95%]">
+                  <!-- ==foxes== -->
+                  <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid  place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">my profile</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Your wallets and socials</span>
+                        </div>
+                      </li>
                     </div>
-                    <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl md:text-lg">my profile</span>
-                      <span class="block text-start font-sans text-sm font-medium md:text-xs">Your wallets and socials</span>
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">My foxes</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Your foxes and their starts</span>
+                        </div>
+                      </li>
                     </div>
-                  </li>
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">Mission</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Send your Foxes on new adventures</span>
+                        </div>
+                      </li>
+                    </div>
 
-                  <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                      <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                  </ul>
+                  <!-- end foxes -->
+                  <!-- ==utility== -->
+                  <ul class="capitalize text-xl font-bold hidden peer-checked/utility:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">Famous Token Marker</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">trade anySOL token</span>
+                        </div>
+                      </li>
                     </div>
-                    <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl">My foxes</span>
-                      <span class="block text-start font-sans text-sm font-medium">Your foxes and their starts</span>
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">Marmalade</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Art commission marketplace</span>
+                        </div>
+                      </li>
                     </div>
-                  </li>
 
-                  <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                      <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">Citrus</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">P2P lending platform</span>
+                        </div>
+                      </li>
                     </div>
-                    <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl">Mission</span>
-                      <span class="block text-start font-sans text-sm font-medium">Send your Foxes on new adventures</span>
-                    </div>
-                  </li>
-                </ul>
-                <!-- end foxes -->
 
-                <!-- ==utility== -->
-                <ul class="capitalize text-xl font-bold hidden peer-checked/utility:flex flex-col gap-3">
-                  <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                      <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                    <div class="md:w-1/2 md:p-2">
+                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                          <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+                        </div>
+                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                          <span class="block text-start font-gaegu text-2xl md:text-lg">Citrus</span>
+                          <span class="block text-start font-sans text-sm font-medium md:text-xs">P2P lending platform</span>
+                        </div>
+                      </li>
                     </div>
-                    <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl">Famous Token Marker</span>
-                      <span class="block text-start font-sans text-sm font-medium">trade anySOL token</span>
+                  </ul>
+                  <!-- end utility -->
+                  <div class="hidden md:peer-checked:group-[]/nav:flex z-10 md:items-center md:flex-row-reverse md:justify-between w-full mt-2 bg-white left-0 px-6 py-2 rounded-full">
+                    <div class="text-2xl flex justify-evenly gap-4">
+                      <span class="text-indigo-600">
+                        <i class="fa-brands fa-discord"></i>
+                      </span>
+                      <span class="text-blue-400">
+                        <i class="fa-brands fa-twitter"></i>
+                      </span>
                     </div>
-                  </li>
-
-                  <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                      <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
+    
+                    <div class="font-lilita-one text-lg text-orange-500 underline flex-1 text-center capitalize">
+                      Terms & Conditions
                     </div>
-                    <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl">Marmalade</span>
-                      <span class="block text-start font-sans text-sm font-medium">Art commission marketplace</span>
-                    </div>
-                  </li>
-
-                  <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400">
-                    <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                      <img src="./public/img/logo.svg" alt="" class="w-6 h-6">
-                    </div>
-                    <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                      <span class="block text-start font-gaegu text-2xl">Citrus</span>
-                      <span class="block text-start font-sans text-sm font-medium">P2P lending platform</span>
-                    </div>
-                  </li>
-                </ul>
-                <!-- end utility -->
+                  </div>
+                </div>
 
                 <!-- END DETAIL NAV -->
               </ul>
@@ -252,53 +288,71 @@
         <!-- end background -->
 
         <!-- ==CITRUS== -->
-        <div class="mt-[-210px] relative mx-8 flex flex-col justify-center z-10">
-          <div class="">
+        <div class="mt-[-210px] relative mx-8 flex flex-col justify-center z-10 md:flex-row md:items-end md:h-96 md:mt-[-190px]">
+          <div class="md:w-1/2 md:px-8 md:pb-12">
             <div class="">
-              <img class="w-64 mx-auto animate-[shake_1s_2s_linear]" src="./public/img/citrus-logo.png" alt="">
+              <img class="w-64 mx-auto animate-[shake_1s_2s_linear] md:w" src="./public/img/citrus-logo.png" alt="">
             </div>
             <div class="font-gaegu mt-4 font-bold">
-              <span class="animate-[show_3s_linear] block text-center text-2xl text-orange-500 leading-4">New to Citrus?</span>
-              <span class="animate-[show_4s_linear] block text-center text-2xl text-white">Learn Citrus in 5 minutes!</span>
+              <span class="animate-[show_3s_linear] block text-center text-2xl text-orange-500 leading-4">
+                New to Citrus?
+              </span>
+              <span class="animate-[show_4s_linear] block text-center text-2xl text-white">
+                Learn Citrus in 5 minutes!
+              </span>
             </div>
             <div class="flex justify-center flex-col mt-1 gap-6">
-              <button class="animate-[move-bt_4500ms_linear] text-white w-full bg-orange-400 rounded-full text-3xl py-3">MasterClass</button>
-              <button class="animate-[move-bt_4s_linear] text-white w-full bg-orange-200 rounded-full text-3xl py-3">Launch Citrus</button>
+              <button class="animate-[move-bt_4500ms_linear] text-white w-full bg-orange-400 rounded-full text-3xl py-3">
+                MasterClass
+              </button>
+              <button class="animate-[move-bt_4s_linear] text-white w-full bg-orange-200 rounded-full text-3xl py-3">
+                Launch Citrus
+              </button>
             </div>
-            <div class="h-[160px] relative w-full mt-14 overflow-y-hidden overflow-x-clip">
-              <div class="flex flex-col items-end justify-end text-4xl uppercase text-white tracking-wider">
-                <span class="opacity-0 leading-tight animate-[text-move_6s_0ms_linear_infinite]"><span class="text-orange-400">Fast</span> liquidity</span>
-                <span class="opacity-0 leading-tight animate-[text-move_6s_400ms_linear_infinite]"><span class="text-orange-400">Earn</span> juice</span>
-                <span class="opacity-0 leading-tight animate-[text-move_6s_800ms_linear_infinite]"><span class="text-orange-400">Low</span> fees</span>
-              </div>
-              <div class="w-full h-full absolute left-0 -bottom-4">
-                <img class="h-full" src="./public/img/citrus-fox.webp" alt="">
-              </div>
+          </div>
+
+          <div class="h-[160px] relative w-full mt-14 overflow-y-hidden overflow-x-clip md:w-1/2 md:h-3/4 md:mt-0 md:shrink-0">
+            <div class="flex flex-col items-end justify-end text-4xl uppercase text-white tracking-wider md:text-5xl">
+              <span class="opacity-0 leading-tight animate-[text-move_6s_0ms_linear_infinite] md:leading-none">
+                <span class="text-orange-400">Fast</span>
+                 liquidity
+              </span>
+              <span class="opacity-0 leading-tight animate-[text-move_6s_400ms_linear_infinite] md:leading-none">
+                <span class="text-orange-400">Earn</span>
+                 juice
+              </span>
+              <span class="opacity-0 leading-tight animate-[text-move_6s_800ms_linear_infinite] md:leading-none">
+                <span class="text-orange-400">Low</span>
+                 fees
+              </span>
+            </div>
+            <div class="w-full h-full absolute left-0 -bottom-4 md:h-3/4 md:-bottom-12">
+              <img class="h-full" src="./public/img/citrus-fox.webp" alt="">
             </div>
           </div>
         </div>
         <!-- END CITRUS -->
         <!-- ==POPULAR TOOL== -->
         <section class="">
-          <div class="bg-gray-900/50 p-6 uppercase">
+          <div class="bg-gray-900/50 p-6 uppercase md:px-8 md:pb-12">
             <div class="text-purple-400 text-xl mb-4"><span class="">Popular tools</span></div>
-            <div class="flex flex-col gap-3">
-              <div class="group relative rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center" style="background-image: url(./public/img/citrus.png);">
+            <div class="grid gap-3 grid-cols-1 md:grid-cols-2">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/citrus.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Citrus</span>
               </div>
 
-              <div class="group relative rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center" style="background-image: url(./public/img/market.png);">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/market.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Famous token marker</span>
               </div>
 
-              <div class="group relative rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center" style="background-image: url(./public/img/ticket.png);">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/ticket.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Rafffle</span>
               </div>
 
-              <div class="group relative rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center" style="background-image: url(./public/img/missions.png);">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/missions.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Missions</span>
               </div>
@@ -309,141 +363,121 @@
         <!-- ==THE COLLECTIONS== -->
         <section>
           <div class="py-6">
-            <div class="text-purple-400 text-xl mb-4 px-6 uppercase"><span class="">The collections</span></div>
-            <div class="flex flex-col gap-3">
-              <!-- == item the collection == -->
-              <div class="bg-orange-500 text-white rounded-3xl p-6 pb-10 relative overflow-hidden">
-                <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10" style="background-image: url(./public/img/ff-fox1.png);"></div>
-                <div class="z-[1] relative">
-                  <div class="flex justify-between">
-                    <div class="flex flex-col items-start">
-                    <span class="text-4xl">Famous Foxes</span>
-                    <span class="text-sm">The 'Genesis' Collection</span>
-                    </div>
-                    <div class="flex flex-col items-end">
-                      <span class="text-4xl">7,777</span>
-                      <span class="text-sm">Collection Size</span>
-                    </div>
-                  </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
-                    <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-white"><i class="fa-solid fa-info"></i></span>
-                    <span class="text-xl">Learn More</span>
-                  </div>
-                  <div class="font-sans mb-8 text-lg">
-                    <span class="uppercase mb-3 font-bold block">About the collection</span>
-                    <p>
-                      The Genesis NFTs from the collection are Famous Foxes. This consists of 7,777 generated foxes from a pool of unique attributes with over 1 Million possible combinations.
-                    </p>
-                  </div>
-                  <div class="text-white">
-                    <span class="text-2xl mb-2 block">Buy a Famous Fox</span>
-                    <button class="bg-orange-500 block w-full border-4 border-c-purple rounded-full py-2 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all">Marketplace</button>
-                  </div>
-                </div>
-              </div>
-              <!-- end item the collection -->
-              <!-- == item the collection == -->
-              <div class="bg-c-pink text-c-pick-dark rounded-3xl p-6 pb-10 relative overflow-hidden">
-                <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10" style="background-image: url(./public/img/ff-fox2.png);"></div>
-                <div class="z-[1] relative">
-                  <div class="flex justify-between">
-                    <div class="flex flex-col items-start">
-                    <span class="text-3xl text-wrap">Transdimensional Foxes</span>
-                    <span class="text-sm">The 'Pixel' Collection</span>
-                    </div>
-                    <div class="flex flex-col items-end">
-                      <span class="text-4xl">7,777</span>
-                      <span class="text-sm">Collection Size</span>
-                    </div>
-                  </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
-                    <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-c-pick-dark"><i class="fa-solid fa-info"></i></span>
-                    <span class="text-xl">Learn More</span>
-                  </div>
-                  <div class="font-sans mb-8 text-lg">
-                    <span class="uppercase mb-3 font-bold block">About the collection</span>
-                    <p>
-                      TFFs, short for Transdimensional Fox Federation, are the pixelated versions of Famous Foxes. Originally airdropped to Famous Fox holders, the remaining 800 were later minted for .5 SOL.
-                    </p>
-                  </div>
-                  <div class="">
-                    <span class="text-2xl mb-2 block">Buy a Transdimensianal Fox</span>
-                    <button class="text-white bg-orange-500 block w-full border-4 border-c-purple rounded-full py-2 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all">Marketplace</button>
-                  </div>
-                </div>
-              </div>
-              <!-- end item the collection -->
-              <!-- == item the collection == -->
-              <div class="bg-c-purple-light text-white rounded-3xl p-6 pb-10 relative overflow-hidden">
-                <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10" style="background-image: url(./public/img/ff-fox3.png);"></div>
-                <div class="z-[1] relative">
-                  <div class="flex justify-between">
-                    <div class="flex flex-col items-start">
-                    <span class="text-3xl text-wrap">Friends & Foes</span>
-                    <span class="text-sm">The 'Pixel' Collection</span>
-                    </div>
-                    <div class="flex flex-col items-end">
-                      <span class="text-4xl"></span>
-                      <span class="text-sm"></span>
-                    </div>
-                  </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
-                    <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-white"><i class="fa-solid fa-info"></i></span>
-                    <span class="text-xl">Learn More</span>
-                  </div>
-                  <div class="font-sans mb-8 text-lg">
-                    <span class="uppercase mb-3 font-bold block">About the collection</span>
-                    <p>
-                      Dens are an NFT that works as the 'ownership' key to both your personal Den and the Dens Utility. Dens allow you to earn rewards, give you a way to show off both your Solana NFT's and your Ethereum NFT's in the same collection.
-                    </p>
-                  </div>
-                  <div class="">
-                    <span class="text-2xl mb-2 block">Buy Friends & Foes</span>
-                    <button class="text-white bg-orange-500 block w-full border-4 border-c-purple rounded-full py-2 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all">Marketplace</button>
-                  </div>
-                </div>
-              </div>
-              <!-- end item the collection -->
-              <!-- == item the collection == -->
-              <div class="bg-c-sky text-white rounded-3xl p-6 pb-10 relative overflow-hidden">
-                <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10" style="background-image: url(./public/img/ff-fox4.png);"></div>
-                <div class="z-[1] relative">
-                  <div class="flex justify-between">
-                    <div class="flex flex-col items-start">
-                    <span class="text-3xl text-wrap">Transdimensional Foxes</span>
-                    <span class="text-sm">The 'Pixel' Collection</span>
-                    </div>
-                    <div class="flex flex-col items-end">
-                      <span class="text-4xl">7,777</span>
-                      <span class="text-sm">Collection Size</span>
-                    </div>
-                  </div>
-                  <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer">
-                    <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full border-white"><i class="fa-solid fa-info"></i></span>
-                    <span class="text-xl">Learn More</span>
-                  </div>
-                  <div class="font-sans mb-8 text-lg">
-                    <span class="uppercase mb-3 font-bold block">About the collection</span>
-                    <p>
-                      Dens are an NFT that works as the 'ownership' key to both your personal Den and the Dens Utility. Dens allow you to earn rewards, give you a way to show off both your Solana NFT's and your Ethereum NFT's in the same collection.
-                    </p>
-                  </div>
-                  <div class="">
-                    <span class="text-2xl mb-2 block">Buy a Den</span>
-                    <button class="text-white bg-orange-500 block w-full border-4 border-c-purple rounded-full py-2 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all">Marketplace</button>
-                  </div>
-                </div>
-              </div>
-              <!-- end item the collection -->
-          </div>
+            <div class="text-purple-400 text-xl mb-4 px-6 uppercase">
+              <span class="">The collections</span>
+            </div>
+            <div class="flex flex-col gap-3" id="the-collections"></div>
           </div>
         </section>
         <!-- END THE COLLECTIONS -->
-
       </main>
+      <script>
+        const CollectionComponent = ({color, title, size, description, image, colorBg, titleBuy, spanCollect}) => {
+          return`
+          <div class="bg-${colorBg} text-${color} rounded-3xl p-6 pb-10 relative overflow-hidden md:mx-10 md:p-16 md:rounded-7xl md:pb-0">
+            <div class="flex justify-between">
+              <div class="flex flex-col items-start">
+                <span class="text-4xl md:text-5xl">${title}</span>
+                <span class="text-sm md:text-base">${spanCollect}</span>
+                <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer md:mb-0">
+                  <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full text-${color} border-${color}"><i class="fa-solid fa-info"></i></span>
+                  <span class="text-xl">Learn More</span>
+                </div>
+              </div>
+              <div class="flex flex-col items-end">
+                <span class="text-4xl md:text-5xl">${size}</span>
+                <span class="text-sm md:text-base">Collection Size</span>
+              </div>
+            </div>
+            <div class="z-[1] md:flex">
+              <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10 md:opacity-100 md:w-1/2 md:relative md:bg-contain md:bg-left-bottom" style="background-image: url(${image});"></div>
+              
+              <div class="md:w-1/2 md:pb-12">
+                <div class="font-sans mb-8 text-lg">
+                  <span class="uppercase mb-3 font-bold block md:capitalize md:mb-6 md:text-[1.8vw]">About the collection</span>
+                  <p class="md:leading-tight md:text-[1.8vw]">
+                    ${description}
+                  </p>
+                </div>
+                <div class="">
+                  <span class="text-2xl mb-2 block md:text-[1.6vw] text-${color}">${titleBuy}</span>
+                  <button class="bg-orange-500 block w-full border-4 text-white border-c-purple md:text-[1.6vw] rounded-full py-2 px-8 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all md:w-fit">Marketplace</button>
+                </div>
+              </div>
+            </div>
+          </div>`
+        }
+        const dataCollections = [
+          {
+            color: "white",
+            title: "Famous Foxes",
+            size: "7,777",
+            description: "The Genesis NFTs from the collection are Famous Foxes. This consists of 7,777 generated foxes from a pool of unique attributes with over 1 Million possible combinations.",
+            image: "./public/img/ff-fox1.png",
+            colorBg: "orange-500",
+            titleBuy: "Buy a Famous Fox",
+            spanCollect: "The 'Genesis' Collection"
+          },
+          {
+            color: "c-pick-dark",
+            title: "Transdimensional Foxes",
+            size: "7,777",
+            description: "TFFs, short for Transdimensional Fox Federation, are the pixelated versions of Famous Foxes. Originally airdropped to Famous Fox holders, the remaining 800 were later minted for .5 SOL.",
+            image: "./public/img/ff-fox2.png",
+            colorBg: "c-pink",
+            titleBuy: "Buy a Transdimensianal Fox",
+            spanCollect: "The 'Pixel' Collection"
 
+          },
+          {
+            color: "white",
+            title: "Friends & Foes",
+            size: "",
+            description: "The Friends & Foes Collection consists of a series of Foxes created by various artists - and growing! These are typically auctioned off for $FOXY.",
+            image: "./public/img/ff-fox3.png",
+            colorBg: "c-purple-light",
+            titleBuy: "Buy Friends & Foes",
+            spanCollect: "The Honorary Collection"
+
+          },
+          {
+            color: "white",
+            title: "Dens",
+            size: "3,000",
+            description: "Dens are an NFT that works as the 'ownership' key to both your personal Den and the Dens Utility. Dens allow you to earn rewards, give you a way to show off both your Solana NFT's and your Ethereum NFT's in the same collection.",
+            image: "./public/img/ff-fox4.png",
+            colorBg: "c-sky",
+            titleBuy: "Buy a Den",
+            spanCollect: "The Metaverse Collection"
+
+          },
+        ]
+        const html = []
+        dataCollections.map(collectionItem => html.push(CollectionComponent(collectionItem)))
+        const theCollectionWrapper = document.getElementById("the-collections")
+        theCollectionWrapper.innerHTML = html.join("")
+      </script>
       <footer>
-        <div class="h-36 w-full"></div>
+        <div class="min-h-[144px] w-full grid place-content-center">
+          <div class="text-white py-20 hidden md:block">
+            <span class="text-5xl">Join the Federation!</span>
+            <div class="flex mt-8">
+              <div class="w-80">
+                <img src="./public/img/cool_fox_dance.webp" alt="">
+              </div>
+              <div class="ml-10 flex flex-col gap-5">
+                <button
+                  class="bg-orange-500 block w-full border-4 border-white text-base rounded-full py-2 px-12 shadow-button !shadow-white hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all">
+                  Discord
+                </button>
+                <button
+                  class="bg-orange-500 block w-full border-4 border-white text-base rounded-full py-2 px-12 shadow-button !shadow-white hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all">
+                  Twitter
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

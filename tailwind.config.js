@@ -114,6 +114,12 @@ module.exports = {
         button: "0px 8px 0px 0px",
         "button-1/2": "0px 4px 0px 0px",
       },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.5rem",
+        "6xl": "3rem",
+        "7xl": "3.5rem",
+      },
       animation: {},
     },
   },
