@@ -18,6 +18,7 @@
   </head>
   <body>
     <div class="bg-c-purple font-lilita-one selection:text-white selection:bg-c-pick-dark ">
+      
       <!-- ==NAV TOP== -->
       <nav class="fixed top-0 left-0 right-0 z-[11]">
         <div class="h-8 bg-c-black overflow-hidden w-full">
@@ -30,14 +31,23 @@
             </span>
           </div>
         </div>
+        
         <!-- ==HEADER== -->
         <header>
           <div iv class="mt-3 flex justify-between px-4">
+            
             <!-- ==logo== -->
-            <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center md:w-12 md:h-12">
-              <img src="./public/img/logo.svg" alt="" class="w-10 h-10 md:w-8 md:h-8" />
+            <div class="flex items-center">
+              <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center md:w-12 md:h-12">
+                <img src="./public/img/logo.svg" alt="" class="w-10 h-10 md:w-8 md:h-8" />
+              </div>
+              <div class="uppercase ml-2 text-2xl text-white hidden lg:block lg:text-3xl">
+                famous <span class="text-orange-400">fox</span> federation
+              </div>
             </div>
+
             <!-- end logo -->
+            
             <!-- ==tab== -->
             <div class="md:hidden">
               <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
@@ -45,10 +55,12 @@
               </label>
             </div>
             <!-- end tab -->
+            
             <!-- ==input show nav== -->
             <input type="checkbox" id="show-nav" class="absolute top-0 peer" hidden
             />
             <!-- end input show nav -->
+            
             <!-- ==nav== -->
             <nav class="hidden peer-checked:block fixed top-0 left-0 right-0 bottom-0 bg-orange-200 overflow-auto scroll-hidden md:relative md:bg-transparent md:flex md:items-center md:overflow-visible">
               <div class="w-full flex justify-between px-6 pt-6 md:hidden">
@@ -140,8 +152,10 @@
                   </label>
                 </li>
 
+                
                 <!-- == DETAIL NAV === -->
                 <div class="group/nav md:absolute md:top-full md:left-0 md:z-10 md:w-[95%]">
+                  
                   <!-- ==foxes== -->
                   <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
                     <div class="md:w-1/2 md:p-2">
@@ -180,6 +194,7 @@
 
                   </ul>
                   <!-- end foxes -->
+                  
                   <!-- ==utility== -->
                   <ul class="capitalize text-xl font-bold hidden peer-checked/utility:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
                     <div class="md:w-1/2 md:p-2">
@@ -278,41 +293,49 @@
       </nav>
       <!-- END NAV TOP -->
       <main>
+        
         <!-- ==background== -->
-        <div class="h-72 relative mt-8 overflow-hidden">
-          <div class="w-full h-full bg-gradient-to-t from-c-purple to-transparent absolute z-[10] "></div>
+        <div class="h-72 relative mt-8 overflow-hidden xl:h-96">
+          <div class="w-full h-full bg-gradient-to-t from-c-purple to-transparent absolute z-[10]"></div>
           <img src="./public/img/bg-1.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-right bg-bottom opacity-0 animate-[show-1_16s_linear_infinite]" >
           <img src="./public/img/bg-2.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-left bg-bottom opacity-0 animate-[show-2_16s_linear_infinite]" >
           <img src="./public/img/bg-3.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-top-right bg-bottom opacity-0 animate-[show-3_16s_linear_infinite]" >
         </div>
         <!-- end background -->
 
+        
         <!-- ==CITRUS== -->
-        <div class="mt-[-210px] relative mx-8 flex flex-col justify-center z-10 md:flex-row md:items-end md:h-96 md:mt-[-190px]">
-          <div class="md:w-1/2 md:px-8 md:pb-12">
-            <div class="">
-              <img class="w-64 mx-auto animate-[shake_1s_2s_linear] md:w" src="./public/img/citrus-logo.png" alt="">
+        <div class="mt-[-210px] relative mx-8 flex flex-col justify-center z-10 md:flex-row md:items-end md:h-96 md:mt-[-190px] lg:mt-[-160px] 2xl:-mt-12">
+          <div class="md:w-1/2 md:px-8 md:pb-14">
+            <div class="mx-8 xl:mx-16 2xl:mx-40 2xl:mb-10">
+              <img class="qanimate-[shake_1s_2s_linear]" src="./public/img/citrus-logo.png" alt="">
             </div>
             <div class="font-gaegu mt-4 font-bold">
-              <span class="animate-[show_3s_linear] block text-center text-2xl text-orange-500 leading-4">
+              <span class="animate-[show_3s_linear] block text-center text-2xl text-orange-500 leading-4 2xl:text-3xl">
                 New to Citrus?
               </span>
-              <span class="animate-[show_4s_linear] block text-center text-2xl text-white">
+              <span class="animate-[show_4s_linear] block text-center text-2xl text-white 2xl:text-3xl">
                 Learn Citrus in 5 minutes!
               </span>
             </div>
-            <div class="flex justify-center flex-col mt-1 gap-6">
-              <button class="animate-[move-bt_4500ms_linear] text-white w-full bg-orange-400 rounded-full text-3xl py-3">
+            <div class="flex justify-center animate-[show_4200ms_linear]">
+              <svg class="w-[50px] xl:ml-[150px]" viewBox="0 0 123 108" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.574219 3.02078C9.70224 30.9264 35.3323 38.2133 57.0643 44.392L57.0686 44.3932C58.0043 44.6592 58.9329 44.9232 59.8525 45.1867C71.3889 48.4921 81.5179 51.6617 88.8425 57.1409C95.2155 61.9083 99.6022 68.5422 100.308 79.3333L88.6491 80.3723L106.097 107.004L122.272 77.3759L108.277 78.623C107.378 65.6544 101.892 56.9119 93.6345 50.735C84.9376 44.2292 73.3399 40.7292 62.056 37.4962C61.4734 37.3293 60.8914 37.1629 60.3101 36.9967C37.5793 30.498 15.9572 24.3164 8.17778 0.53363L0.574219 3.02078Z" fill="white">
+                </path>
+              </svg>
+            </div>
+            <div class="flex justify-center flex-col mt-1 gap-6 lg:gap-4 xl:flex-row-reverse">
+              <button class="animate-[move-bt_4500ms_linear] text-white w-full bg-orange-400 rounded-full text-3xl py-4 px-6 xl:w-fit 2xl:text-4xl">
                 MasterClass
               </button>
-              <button class="animate-[move-bt_4s_linear] text-white w-full bg-orange-200 rounded-full text-3xl py-3">
+              <button class="animate-[move-bt_4s_linear] text-white w-full bg-orange-200 rounded-full text-3xl py-4 px-6 xl:w-fit 2xl:text-4xl">
                 Launch Citrus
               </button>
             </div>
           </div>
 
-          <div class="h-[160px] relative w-full mt-14 overflow-y-hidden overflow-x-clip md:w-1/2 md:h-3/4 md:mt-0 md:shrink-0">
-            <div class="flex flex-col items-end justify-end text-4xl uppercase text-white tracking-wider md:text-5xl">
+          <div class="h-[160px] relative w-full mt-14 overflow-y-hidden overflow-x-clip md:w-1/2 md:h-3/4 md:mt-0 md:shrink-0 lg:h-5/6 2xl:h-[450px]">
+            <div class="flex flex-col items-end justify-end text-4xl uppercase text-white tracking-wider md:text-5xl lg:text-6xl 2xl:text-8xl">
               <span class="opacity-0 leading-tight animate-[text-move_6s_0ms_linear_infinite] md:leading-none">
                 <span class="text-orange-400">Fast</span>
                  liquidity
@@ -326,33 +349,34 @@
                  fees
               </span>
             </div>
-            <div class="w-full h-full absolute left-0 -bottom-4 md:h-3/4 md:-bottom-12">
+            <div class="w-full h-full absolute left-0 -bottom-4 md:h-3/4 md:-bottom-12 2xl:h-full">
               <img class="h-full" src="./public/img/citrus-fox.webp" alt="">
             </div>
           </div>
         </div>
         <!-- END CITRUS -->
+        
         <!-- ==POPULAR TOOL== -->
         <section class="">
-          <div class="bg-gray-900/50 p-6 uppercase md:px-8 md:pb-12">
-            <div class="text-purple-400 text-xl mb-4"><span class="">Popular tools</span></div>
-            <div class="grid gap-3 grid-cols-1 md:grid-cols-2">
-              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/citrus.png);">
+          <div class="bg-gray-900/50 p-6 uppercase md:px-8 md:pb-12 lg:px-12">
+            <div class="text-purple-400 text-xl mb-4 xl:text-2xl"><span class="">Popular tools</span></div>
+            <div class="grid gap-3 grid-cols-1 text-2xl md:grid-cols-2 md:text-3xl xl:text-4xl 2xl:text-6xl">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-white bg-cover bg-center md:h-20 xl:h-40" style="background-image: url(./public/img/citrus.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Citrus</span>
               </div>
 
-              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/market.png);">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-white bg-cover bg-center md:h-20 xl:h-40" style="background-image: url(./public/img/market.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Famous token marker</span>
               </div>
 
-              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/ticket.png);">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-white bg-cover bg-center md:h-20 xl:h-40" style="background-image: url(./public/img/ticket.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Rafffle</span>
               </div>
 
-              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-2xl text-white bg-cover bg-center md:h-20 md:text-3xl" style="background-image: url(./public/img/missions.png);">
+              <div class="group relative overflow-hidden rounded-3xl h-20 grid place-content-center text-white bg-cover bg-center md:h-20 xl:h-40" style="background-image: url(./public/img/missions.png);">
                 <div class="absolute bg-black/50 group-hover:bg-black/70 top-0 left-0 right-0 bottom-0"></div>
                 <span class="z-[1]">Missions</span>
               </div>
@@ -360,103 +384,20 @@
           </div>
         </section>
         <!-- END POPULAR TOOL -->
+        
         <!-- ==THE COLLECTIONS== -->
         <section>
           <div class="py-6">
-            <div class="text-purple-400 text-xl mb-4 px-6 uppercase">
+            <div class="text-purple-400 text-xl mb-4 xl:text-2xl px-6 uppercase">
               <span class="">The collections</span>
             </div>
-            <div class="flex flex-col gap-3" id="the-collections"></div>
+            <div class="flex flex-col gap-3 xl:gap-5" id="the-collections"></div>
           </div>
         </section>
         <!-- END THE COLLECTIONS -->
       </main>
-      <script>
-        const CollectionComponent = ({color, title, size, description, image, colorBg, titleBuy, spanCollect}) => {
-          return`
-          <div class="bg-${colorBg} text-${color} rounded-3xl p-6 pb-10 relative overflow-hidden md:mx-10 md:p-16 md:rounded-7xl md:pb-0">
-            <div class="flex justify-between">
-              <div class="flex flex-col items-start">
-                <span class="text-4xl md:text-5xl">${title}</span>
-                <span class="text-sm md:text-base">${spanCollect}</span>
-                <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer md:mb-0">
-                  <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full text-${color} border-${color}"><i class="fa-solid fa-info"></i></span>
-                  <span class="text-xl">Learn More</span>
-                </div>
-              </div>
-              <div class="flex flex-col items-end">
-                <span class="text-4xl md:text-5xl">${size}</span>
-                <span class="text-sm md:text-base">Collection Size</span>
-              </div>
-            </div>
-            <div class="z-[1] md:flex">
-              <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10 md:opacity-100 md:w-1/2 md:relative md:bg-contain md:bg-left-bottom" style="background-image: url(${image});"></div>
-              
-              <div class="md:w-1/2 md:pb-12">
-                <div class="font-sans mb-8 text-lg">
-                  <span class="uppercase mb-3 font-bold block md:capitalize md:mb-6 md:text-[1.8vw]">About the collection</span>
-                  <p class="md:leading-tight md:text-[1.8vw]">
-                    ${description}
-                  </p>
-                </div>
-                <div class="">
-                  <span class="text-2xl mb-2 block md:text-[1.6vw] text-${color}">${titleBuy}</span>
-                  <button class="bg-orange-500 block w-full border-4 text-white border-c-purple md:text-[1.6vw] rounded-full py-2 px-8 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all md:w-fit">Marketplace</button>
-                </div>
-              </div>
-            </div>
-          </div>`
-        }
-        const dataCollections = [
-          {
-            color: "white",
-            title: "Famous Foxes",
-            size: "7,777",
-            description: "The Genesis NFTs from the collection are Famous Foxes. This consists of 7,777 generated foxes from a pool of unique attributes with over 1 Million possible combinations.",
-            image: "./public/img/ff-fox1.png",
-            colorBg: "orange-500",
-            titleBuy: "Buy a Famous Fox",
-            spanCollect: "The 'Genesis' Collection"
-          },
-          {
-            color: "c-pick-dark",
-            title: "Transdimensional Foxes",
-            size: "7,777",
-            description: "TFFs, short for Transdimensional Fox Federation, are the pixelated versions of Famous Foxes. Originally airdropped to Famous Fox holders, the remaining 800 were later minted for .5 SOL.",
-            image: "./public/img/ff-fox2.png",
-            colorBg: "c-pink",
-            titleBuy: "Buy a Transdimensianal Fox",
-            spanCollect: "The 'Pixel' Collection"
-
-          },
-          {
-            color: "white",
-            title: "Friends & Foes",
-            size: "",
-            description: "The Friends & Foes Collection consists of a series of Foxes created by various artists - and growing! These are typically auctioned off for $FOXY.",
-            image: "./public/img/ff-fox3.png",
-            colorBg: "c-purple-light",
-            titleBuy: "Buy Friends & Foes",
-            spanCollect: "The Honorary Collection"
-
-          },
-          {
-            color: "white",
-            title: "Dens",
-            size: "3,000",
-            description: "Dens are an NFT that works as the 'ownership' key to both your personal Den and the Dens Utility. Dens allow you to earn rewards, give you a way to show off both your Solana NFT's and your Ethereum NFT's in the same collection.",
-            image: "./public/img/ff-fox4.png",
-            colorBg: "c-sky",
-            titleBuy: "Buy a Den",
-            spanCollect: "The Metaverse Collection"
-
-          },
-        ]
-        const html = []
-        dataCollections.map(collectionItem => html.push(CollectionComponent(collectionItem)))
-        const theCollectionWrapper = document.getElementById("the-collections")
-        theCollectionWrapper.innerHTML = html.join("")
-      </script>
+      
+      <!-- ==FOOTER== -->
       <footer>
         <div class="min-h-[144px] w-full grid place-content-center">
           <div class="text-white py-20 hidden md:block">
@@ -479,7 +420,98 @@
           </div>
         </div>
       </footer>
+      <!-- END FOOTER -->
     </div>
+    <script>
+      const CollectionComponent = ({color, title, size, description, image, colorBorder, colorBg, titleBuy, spanCollect}) => {
+        return`
+        <div class="${colorBg} ${color} rounded-3xl p-6 pb-10 relative overflow-hidden md:mx-10 md:p-16 md:rounded-7xl md:pb-0">
+          <div class="flex justify-between">
+            <div class="flex flex-col items-start">
+              <span class="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl">${title}</span>
+              <span class="text-sm md:text-base">${spanCollect}</span>
+              <div class="font-gaegu flex gap-3 items-center mt-4 mb-8 cursor-pointer md:mb-0">
+                <span class="h-5 w-5 border-2 grid place-content-center text-xs rounded-full ${color} ${colorBorder}"><i class="fa-solid fa-info"></i></span>
+                <span class="text-xl">Learn More</span>
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span class="text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl">${size}</span>
+              <span class="text-sm md:text-base">Collection Size</span>
+            </div>
+          </div>
+          <div class="z-[1] md:flex">
+            <div class="absolute top-0 left-0 right-0 bottom-0 z-0 bg-right-bottom bg-[length:155%] bg-no-repeat opacity-10 w-80 md:w-100 md:opacity-100 md:w-1/2 md:relative md:bg-contain md:bg-left-bottom" style="background-image: url(${image});"></div>
+            
+            <div class="md:w-1/2 md:pb-12">
+              <div class="font-sans mb-8 text-lg">
+                <span class="uppercase mb-3 font-bold block md:capitalize md:mb-6 md:text-[1.8vw]">About the collection</span>
+                <p class="md:leading-tight md:text-[1.8vw]">
+                  ${description}
+                </p>
+              </div>
+              <div class="mt-20 xl:mt-[100px]">
+                <span class="text-2xl mb-2 block md:text-[1.6vw] ${color}">${titleBuy}</span>
+                <button class="bg-orange-500 block w-full border-4 text-white border-c-purple md:text-[1.6vw] rounded-full py-2 px-12 shadow-button !shadow-c-purple hover:shadow-button-1/2 hover:translate-y-1 active:shadow-none active:translate-y-2 transition-all md:w-fit">Marketplace</button>
+              </div>
+            </div>
+          </div>
+        </div>`
+      }
+      const dataCollections = [
+        {
+          color: "text-white",
+          colorBorder: "border-white",
+          title: "Famous Foxes",
+          size: "7,777",
+          description: "The Genesis NFTs from the collection are Famous Foxes. This consists of 7,777 generated foxes from a pool of unique attributes with over 1 Million possible combinations.",
+          image: "./public/img/ff-fox1.png",
+          colorBg: "bg-orange-500",
+          titleBuy: "Buy a Famous Fox",
+          spanCollect: "The 'Genesis' Collection"
+        },
+        {
+          color: "text-c-pick-dark",
+          colorBorder: "border-c-pick-dark",
+          title: "Transdimensional Foxes",
+          size: "7,777",
+          description: "TFFs, short for Transdimensional Fox Federation, are the pixelated versions of Famous Foxes. Originally airdropped to Famous Fox holders, the remaining 800 were later minted for .5 SOL.",
+          image: "./public/img/ff-fox2.png",
+          colorBg: "bg-c-pink",
+          titleBuy: "Buy a Transdimensianal Fox",
+          spanCollect: "The 'Pixel' Collection"
+
+        },
+        {
+          color: "text-white",
+          colorBorder: "border-white",
+          title: "Friends & Foes",
+          size: "",
+          description: "The Friends & Foes Collection consists of a series of Foxes created by various artists - and growing! These are typically auctioned off for $FOXY.",
+          image: "./public/img/ff-fox3.png",
+          colorBg: "bg-c-purple-light",
+          titleBuy: "Buy Friends & Foes",
+          spanCollect: "The Honorary Collection"
+
+        },
+        {
+          color: "text-white",
+          colorBorder: "border-white",
+          title: "Dens",
+          size: "3,000",
+          description: "Dens are an NFT that works as the 'ownership' key to both your personal Den and the Dens Utility. Dens allow you to earn rewards, give you a way to show off both your Solana NFT's and your Ethereum NFT's in the same collection.",
+          image: "./public/img/ff-fox4.png",
+          colorBg: "bg-c-sky",
+          titleBuy: "Buy a Den",
+          spanCollect: "The Metaverse Collection"
+
+        },
+      ]
+      const html = []
+      dataCollections.map(collectionItem => html.push(CollectionComponent(collectionItem)))
+      const theCollectionWrapper = document.getElementById("the-collections")
+      theCollectionWrapper.innerHTML = html.join("")
+    </script>
   </body>
 </html>
 
