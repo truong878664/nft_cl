@@ -1,549 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Citrus | Shop</title>
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <link rel="shortcut icon" href="../public/img/logo.svg" type="image/x-icon"/>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Lilita+One&display=swap" rel="stylesheet"/>
-    <!-- end font -->
-
-    <!-- icon -->
-    <link rel="stylesheet" href="../public/font/fontawesome-free-6.4.0-web/css/all.min.css"/>
-    <!-- end icon -->
-    </head>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Citrus | Shop</title>
+  <link rel="stylesheet" href="../public/css/style.css" />
+  <link rel="shortcut icon" href="../public/img/logo.svg" type="image/x-icon"/>
+  <!-- ==font== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Lilita+One&display=swap" rel="stylesheet"/>
+  <!-- end font -->
+  <!-- ==icon== -->
+  <link rel="stylesheet" href="../public/font/fontawesome-free-6.4.0-web/css/all.min.css"/>
+  <!-- end icon -->
+  </head>
 <body>
-    <div class="bg-c-purple font-lilita-one selection:text-white selection:bg-c-pick-dark ">
-        <!-- ==NAV TOP== -->
-      <nav class="fixed top-0 left-0 right-0 z-[11]">
-        <div class="h-8 bg-c-black overflow-hidden w-full">
-          <div class="w-full h-full font-sans animate-[nav-move_5s_linear_infinite] flex md:animate-[nav-move_10s_linear_infinite] lg:animate-[nav-move_15s_linear_infinite]">
-            <span class="font-bold text-orange-500 leading-8 w-full block shrink-0" >
-              Juice redemption is now live!
-            </span>
-            <span class="font-bold text-orange-400 leading-8 w-full block shrink-0">
-              Juice redemption is now live!
-            </span>
-          </div>
+  <div class="bg-c-purple font-lilita-one selection:text-white selection:bg-c-pick-dark ">
+      <!-- ==NAV TOP== -->
+    <nav class="fixed top-0 left-0 right-0 z-[11]">
+      <div class="h-8 bg-c-black overflow-hidden w-full">
+        <div class="w-full h-full font-sans animate-[nav-move_5s_linear_infinite] flex md:animate-[nav-move_10s_linear_infinite] lg:animate-[nav-move_15s_linear_infinite]">
+          <span class="font-bold text-orange-500 leading-8 w-full block shrink-0" >
+            Juice redemption is now live!
+          </span>
+          <span class="font-bold text-orange-400 leading-8 w-full block shrink-0">
+            Juice redemption is now live!
+          </span>
         </div>
-        <!-- ==HEADER== -->
-        <header>
-          <div iv class="mt-3 flex justify-between px-4">
-            
-            <!-- ==logo== -->
-            <div class="flex items-center">
-              <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center md:w-12 md:h-12">
-                <a href="/"><img src="../public/img/logo.svg" alt="" class="w-10 h-10 md:w-8 md:h-8" /></a>
+      </div>
+      <!-- ==HEADER== -->
+      <header>
+        <div iv class="mt-3 flex justify-between px-4">
+          
+          <!-- ==logo== -->
+          <div class="flex items-center">
+            <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center md:w-12 md:h-12">
+              <a href="/"><img src="../public/img/logo.svg" alt="" class="w-10 h-10 md:w-8 md:h-8" /></a>
+            </div>
+            <div class="uppercase ml-2 text-2xl text-white hidden lg:block lg:text-3xl">
+              famous <span class="text-orange-400">fox</span> federation
+            </div>
+          </div>
+
+          <!-- end logo -->
+          
+          <!-- ==tab== -->
+          <div class="md:hidden">
+            <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+          <!-- end tab -->
+          
+          <!-- ==input show nav== -->
+          <input type="checkbox" id="show-nav" class="absolute top-0 peer" hidden
+          />
+          <!-- end input show nav -->
+          
+          <!-- ==nav== -->
+          <nav class="hidden peer-checked:block fixed top-0 left-0 right-0 bottom-0 bg-orange-200 overflow-auto scroll-hidden md:relative md:bg-transparent md:flex md:items-center md:overflow-visible">
+            <div class="w-full flex justify-between px-6 pt-6 md:hidden">
+              <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center">
+                <img src="../public/img/logo.svg" alt="" class="w-10 h-10" />
               </div>
-              <div class="uppercase ml-2 text-2xl text-white hidden lg:block lg:text-3xl">
-                famous <span class="text-orange-400">fox</span> federation
+              <div class="">
+                <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
+                  <i class="fa-solid fa-xmark"></i>
+                </label>
               </div>
             </div>
+            <ul class="uppercase font-lilita-one text-5xl px-6 py-12 flex flex-col gap-3 md:flex-row md:justify-center md:items-center md:text-base md:bg-orange-400 md:py-1 md:px-2 md:rounded-full md:shrink-0 md:h-full ">
+              <input type="radio" name="nav" hidden class="peer/all" id="all" checked/>
+              <input type="radio" name="nav" hidden class="peer peer/foxes" id="foxes"/>
+              <input type="radio" name="nav" hidden class="peer peer/utility" id="utility"/>
+              <input type="radio" name="nav" hidden class="peer peer/foxy" id="foxy"/>
+              <input type="radio" name="nav" hidden class="peer peer/dens" id="dens"/>
+              <input type="radio" name="nav" hidden class="peer peer/merch" id="merch"/>
 
-            <!-- end logo -->
-            
-            <!-- ==tab== -->
-            <div class="md:hidden">
-              <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
-                <i class="fa-solid fa-bars"></i>
-              </label>
-            </div>
-            <!-- end tab -->
-            
-            <!-- ==input show nav== -->
-            <input type="checkbox" id="show-nav" class="absolute top-0 peer" hidden
-            />
-            <!-- end input show nav -->
-            
-            <!-- ==nav== -->
-            <nav class="hidden peer-checked:block fixed top-0 left-0 right-0 bottom-0 bg-orange-200 overflow-auto scroll-hidden md:relative md:bg-transparent md:flex md:items-center md:overflow-visible">
-              <div class="w-full flex justify-between px-6 pt-6 md:hidden">
-                <div class="h-16 w-16 rounded-full bg-orange-400 grid place-content-center">
-                  <img src="../public/img/logo.svg" alt="" class="w-10 h-10" />
-                </div>
-                <div class="">
-                  <label for="show-nav" class="text-2xl text-white w-16 h-16 rounded-full bg-orange-400 grid place-content-center hover:bg-orange-500">
-                    <i class="fa-solid fa-xmark"></i>
-                  </label>
-                </div>
-              </div>
-              <ul class="uppercase font-lilita-one text-5xl px-6 py-12 flex flex-col gap-3 md:flex-row md:justify-center md:items-center md:text-base md:bg-orange-400 md:py-1 md:px-2 md:rounded-full md:shrink-0 md:h-full ">
-                <input type="radio" name="nav" hidden class="peer/all" id="all" checked/>
-                <input type="radio" name="nav" hidden class="peer peer/foxes" id="foxes"/>
-                <input type="radio" name="nav" hidden class="peer peer/utility" id="utility"/>
-                <input type="radio" name="nav" hidden class="peer peer/foxy" id="foxy"/>
-                <input type="radio" name="nav" hidden class="peer peer/dens" id="dens"/>
-                <input type="radio" name="nav" hidden class="peer peer/merch" id="merch"/>
+              <li class="hidden peer-checked/all:block peer-checked/foxes:block relative group md:block">
+                <label 
+                  class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxes:group-[]:bg-orange-400 peer-checked/foxes:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                  for="foxes">
+                  Foxes
+                </label>
+                <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxes:group-[]:block bg-orange-100/40 rounded-full">
+                  <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
+                    <span class="md:hidden">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                  </span>
+                </label>
+              </li>
+              <li class="hidden peer-checked/all:block peer-checked/utility:block relative group md:block">
+                <label 
+                  class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/utility:group-[]:bg-orange-400 peer-checked/utility:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                  for="utility">
+                  Utility
+                </label>
+                <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/utility:group-[]:block bg-orange-100/40 rounded-full">
+                  <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
+                    <span class="md:hidden">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                  </span>
+                </label>
+              </li>
+              <li class="hidden peer-checked/all:block peer-checked/foxy:block relative group md:block">
+                <label 
+                  class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxy:group-[]:bg-orange-400 peer-checked/foxy:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                  for="foxy">
+                  $Foxy
+                </label>
+                <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxy:group-[]:block bg-orange-100/40 rounded-full">
+                  <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
+                    <span class="md:hidden">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                  </span>
+                </label>
+              </li>
+              <li class="hidden peer-checked/all:block peer-checked/dens:block relative group md:block">
+                <label 
+                  class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/dens:group-[]:bg-orange-400 peer-checked/dens:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
+                  for="dens">
+                  Dens
+                </label>
+                <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/dens:group-[]:block bg-orange-100/40 rounded-full">
+                  <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
+                    <span class="md:hidden">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                  </span>
+                </label>
+              </li>
+              <li class="hidden peer-checked/all:block peer-checked/merch:block relative group md:block">
+                <a 
+                  class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/merch:group-[]:bg-orange-400 peer-checked/merch:group-[]:hover:text-orange-100 md:text-white md:py-1 md:px-4" 
+                  href="/shop">
+                  Shop
+                </a>
+                <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/merch:group-[]:block bg-orange-100/40 rounded-full">
+                  <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
+                    <span class="md:hidden">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                  </span>
+                </label>
+              </li>
 
-                <li class="hidden peer-checked/all:block peer-checked/foxes:block relative group md:block">
-                  <label 
-                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxes:group-[]:bg-orange-400 peer-checked/foxes:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
-                    for="foxes">
-                    Foxes
-                  </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxes:group-[]:block bg-orange-100/40 rounded-full">
-                    <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <span class="md:hidden">
-                        <i class="fa-solid fa-chevron-left"></i>
-                      </span>
-                    </span>
-                  </label>
-                </li>
-                <li class="hidden peer-checked/all:block peer-checked/utility:block relative group md:block">
-                  <label 
-                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/utility:group-[]:bg-orange-400 peer-checked/utility:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
-                    for="utility">
-                    Utility
-                  </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/utility:group-[]:block bg-orange-100/40 rounded-full">
-                    <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <span class="md:hidden">
-                        <i class="fa-solid fa-chevron-left"></i>
-                      </span>
-                    </span>
-                  </label>
-                </li>
-                <li class="hidden peer-checked/all:block peer-checked/foxy:block relative group md:block">
-                  <label 
-                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/foxy:group-[]:bg-orange-400 peer-checked/foxy:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
-                    for="foxy">
-                    $Foxy
-                  </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/foxy:group-[]:block bg-orange-100/40 rounded-full">
-                    <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <span class="md:hidden">
-                        <i class="fa-solid fa-chevron-left"></i>
-                      </span>
-                    </span>
-                  </label>
-                </li>
-                <li class="hidden peer-checked/all:block peer-checked/dens:block relative group md:block">
-                  <label 
-                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/dens:group-[]:bg-orange-400 peer-checked/dens:group-[]:text-orange-100 md:text-white md:py-1 md:px-4" 
-                    for="dens">
-                    Dens
-                  </label>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/dens:group-[]:block bg-orange-100/40 rounded-full">
-                    <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <span class="md:hidden">
-                        <i class="fa-solid fa-chevron-left"></i>
-                      </span>
-                    </span>
-                  </label>
-                </li>
-                <li class="hidden peer-checked/all:block peer-checked/merch:block relative group md:block">
-                  <a 
-                    class="block text-center px-6 py-3 rounded-full text-orange-400 hover:bg-orange-300 hover:text-white peer-checked/merch:group-[]:bg-orange-400 peer-checked/merch:group-[]:hover:text-orange-100 md:text-white md:py-1 md:px-4" 
-                    href="/shop">
-                    Shop
-                  </a>
-                  <label for="all" class="absolute top-0 left-0 right-0 bottom-0 hidden peer-checked/merch:group-[]:block bg-orange-100/40 rounded-full">
-                    <span class="absolute top-1/2 left-10 -translate-y-1/2 text-2xl text-orange-100">
-                      <span class="md:hidden">
-                        <i class="fa-solid fa-chevron-left"></i>
-                      </span>
-                    </span>
-                  </label>
-                </li>
-
+              
+              <!-- == DETAIL NAV === -->
+              <div class="group/nav md:absolute md:top-full md:left-0 md:z-10 md:w-[95%]">
                 
-                <!-- == DETAIL NAV === -->
-                <div class="group/nav md:absolute md:top-full md:left-0 md:z-10 md:w-[95%]">
-                  
-                  <!-- ==foxes== -->
-                  <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid  place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">my profile</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Your wallets and socials</span>
-                        </div>
-                      </li>
-                    </div>
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">My foxes</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Your foxes and their starts</span>
-                        </div>
-                      </li>
-                    </div>
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">Mission</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Send your Foxes on new adventures</span>
-                        </div>
-                      </li>
-                    </div>
+                <!-- ==foxes== -->
+                <ul class="capitalize text-xl font-bold hidden peer-checked/foxes:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid  place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">my profile</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">Your wallets and socials</span>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">My foxes</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">Your foxes and their starts</span>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">Mission</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">Send your Foxes on new adventures</span>
+                      </div>
+                    </li>
+                  </div>
 
-                  </ul>
-                  <!-- end foxes -->
-                  
-                  <!-- ==utility== -->
-                  <ul class="capitalize text-xl font-bold hidden peer-checked/utility:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">Famous Token Marker</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">trade anySOL token</span>
-                        </div>
-                      </li>
-                    </div>
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">Marmalade</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">Art commission marketplace</span>
-                        </div>
-                      </li>
-                    </div>
+                </ul>
+                <!-- end foxes -->
+                
+                <!-- ==utility== -->
+                <ul class="capitalize text-xl font-bold hidden peer-checked/utility:group-[]/nav:flex flex-col gap-3 md:w-full md:gap-0 md:mx-auto md:bg-orange-200 md:mt-1 md:rounded-2xl md:p-0 md:flex-row md:flex-wrap">
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">Famous Token Marker</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">trade anySOL token</span>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">Marmalade</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">Art commission marketplace</span>
+                      </div>
+                    </li>
+                  </div>
 
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">Citrus</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">P2P lending platform</span>
-                        </div>
-                      </li>
-                    </div>
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">Citrus</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">P2P lending platform</span>
+                      </div>
+                    </li>
+                  </div>
 
-                    <div class="md:w-1/2 md:p-2">
-                      <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
-                        <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
-                          <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
-                        </div>
-                        <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
-                          <span class="block text-start font-gaegu text-2xl md:text-lg">Citrus</span>
-                          <span class="block text-start font-sans text-sm font-medium md:text-xs">P2P lending platform</span>
-                        </div>
-                      </li>
-                    </div>
-                  </ul>
-                  <!-- end utility -->
-                  <div class="hidden md:peer-checked:group-[]/nav:flex z-10 md:items-center md:flex-row-reverse md:justify-between w-full mt-2 bg-white left-0 px-6 py-2 rounded-full">
-                    <div class="text-2xl flex justify-evenly gap-4">
-                      <span class="text-indigo-600">
-                        <i class="fa-brands fa-discord"></i>
-                      </span>
-                      <span class="text-blue-400">
-                        <i class="fa-brands fa-twitter"></i>
-                      </span>
-                    </div>
-    
-                    <div class="font-lilita-one text-lg text-orange-500 underline flex-1 text-center capitalize">
-                      Terms & Conditions
-                    </div>
+                  <div class="md:w-1/2 md:p-2">
+                    <li class="text-center p-3 rounded-full text-orange-400 bg-white flex group hover:bg-orange-400 md:p-2">
+                      <div class="w-12 h-12 rounded-full bg-orange-400 grid place-content-center shadow-sm shadow-[#ccc] border-2 border-white">
+                        <img src="../public/img/logo.svg" alt="" class="w-6 h-6">
+                      </div>
+                      <div class="ml-2 text-c-purple flex flex-col justify-center group-hover:text-white">
+                        <span class="block text-start font-gaegu text-2xl md:text-lg">Citrus</span>
+                        <span class="block text-start font-sans text-sm font-medium md:text-xs">P2P lending platform</span>
+                      </div>
+                    </li>
+                  </div>
+                </ul>
+                <!-- end utility -->
+                <div class="hidden md:peer-checked:group-[]/nav:flex z-10 md:items-center md:flex-row-reverse md:justify-between w-full mt-2 bg-white left-0 px-6 py-2 rounded-full">
+                  <div class="text-2xl flex justify-evenly gap-4">
+                    <span class="text-indigo-600">
+                      <i class="fa-brands fa-discord"></i>
+                    </span>
+                    <span class="text-blue-400">
+                      <i class="fa-brands fa-twitter"></i>
+                    </span>
+                  </div>
+  
+                  <div class="font-lilita-one text-lg text-orange-500 underline flex-1 text-center capitalize">
+                    Terms & Conditions
                   </div>
                 </div>
-
-                <!-- END DETAIL NAV -->
-              </ul>
-              <div class="flex justify-center md:h-full">
-                <button class="uppercase rounded-full mx-3 py-4 bg-orange-400 text-lg font-lilita-one w-full h-fit justify-center text-white flex md:text-base md:w-fit md:shrink-0 md:py-0 md:h-full md:flex md:items-center px-2">
-                  <span class="text-slate-200 mr-2 md:hidden">
-                    <i class="fa-solid fa-plug"></i>
-                  </span>
-                  <span class="whitespace-normal">Connect wallet</>
-                </button>
               </div>
-              <div class="md:hidden">
-                <div class="py-20 text-6xl flex justify-evenly mt-2">
-                  <span class="text-indigo-600">
-                    <i class="fa-brands fa-discord"></i>
-                  </span>
-                  <span class="text-blue-400">
-                    <i class="fa-brands fa-twitter"></i>
-                  </span>
-                </div>
 
-                <div class="font-lilita-one px-8 py-4 mb-6 text-lg text-orange-500 underline">
-                  Terms & Conditions
-                </div>
+              <!-- END DETAIL NAV -->
+            </ul>
+            <div class="flex justify-center md:h-full">
+              <button class="uppercase rounded-full mx-3 py-4 bg-orange-400 text-lg font-lilita-one w-full h-fit justify-center text-white flex md:text-base md:w-fit md:shrink-0 md:py-0 md:h-full md:flex md:items-center px-2">
+                <span class="text-slate-200 mr-2 md:hidden">
+                  <i class="fa-solid fa-plug"></i>
+                </span>
+                <span class="whitespace-normal">Connect wallet</>
+              </button>
+            </div>
+            <div class="md:hidden">
+              <div class="py-20 text-6xl flex justify-evenly mt-2">
+                <span class="text-indigo-600">
+                  <i class="fa-brands fa-discord"></i>
+                </span>
+                <span class="text-blue-400">
+                  <i class="fa-brands fa-twitter"></i>
+                </span>
               </div>
-            </nav>
-            <!-- end nav -->
+
+              <div class="font-lilita-one px-8 py-4 mb-6 text-lg text-orange-500 underline">
+                Terms & Conditions
+              </div>
+            </div>
+          </nav>
+          <!-- end nav -->
+        </div>
+      </header>
+      <!-- END HEADER -->
+    </nav>
+    <!-- END NAV TOP -->
+    <main>
+      <!-- ==background== -->
+      <div class="h-72 relative mt-8 overflow-hidden xl:h-96">
+        <div class="w-full h-full bg-gradient-to-t from-c-purple to-transparent absolute z-[10]"></div>
+        <img src="../public/img/bg-1.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-right bg-bottom opacity-0 animate-[show-1_16s_linear_infinite]" >
+        <img src="../public/img/bg-2.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-left bg-bottom opacity-0 animate-[show-2_16s_linear_infinite]" >
+        <img src="../public/img/bg-3.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-top-right bg-bottom opacity-0 animate-[show-3_16s_linear_infinite]" >
+      </div>
+      <!-- end background -->
+
+      <div class="mt-[-180px] relative text-white z-10 lg:mt-[-160px]">
+        <div class="flex flex-col items-center ">
+          <span class="block text-4xl uppercase mb-8 mx-8 self-stretch md:text-6xl">Foxy boutique</span>
+          <div class="container mx-auto xl:flex">
+            <div class="bg-c-purple-light/80 rounded-3xl p-6 mx-8 self-stretch h-fit xl:sticky xl:top-24 xl:w-1/4">
+              <div class="flex flex-col font-bold">
+                <span class="text-4xl uppercase text-orange-400">Wen merch?!</span>
+                <span class="text-lg font-sans mt-3">Foxy Merchandise is now available!</span>
+              </div>
+              <input type="checkbox" hidden name="" class="peer/more-merch" id="more-merch">
+              <label for="more-merch" class="inline-block mt-3 font-sans text-lg border-2 px-3 py-1 rounded-xl text-orange-500 border-orange-500 peer-checked/more-merch:bg-orange-500 peer-checked/more-merch:text-white lg:hidden">Learn More</label>
+              <div class="font-sans font-bold text-lg mt-3 hidden peer-checked/more-merch:block lg:block">
+                <p class="mb-3">Prices and payments will be in USDC.</p>
+                <p class="mb-3">Please note that while you will be required to enter your shipping particulars during the checkout, this information will be sent directly to the retailer handling the shipping. Famous Fox Federation will NEVER store your personal particulars.</p>
+                <p class="mb-3">Merch provided by <a class="text-orange-500" href="" target="_blank">W3W</a>. Please contact <a class="text-orange-500" href="">support@null.com</a> for shipment related support.</p>
+              </div>
+            </div>
+            <!-- ==SHOP ITEM CONTAINER== -->
+            <div class="mx-10 grid grid-rows-1 mt-10 gap-8 select-none md:grid-cols-3 xl:w-3/4" id="shop-item-container"></div>
+            <!-- END SHOP ITEM CONTAINER -->    
           </div>
-        </header>
-        <!-- END HEADER -->
-      </nav>
-      <!-- END NAV TOP -->
-      <main>
-        <!-- ==background== -->
-        <div class="h-72 relative mt-8 overflow-hidden xl:h-96">
-            <div class="w-full h-full bg-gradient-to-t from-c-purple to-transparent absolute z-[10]"></div>
-            <img src="../public/img/bg-1.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-right bg-bottom opacity-0 animate-[show-1_16s_linear_infinite]" >
-            <img src="../public/img/bg-2.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-bottom-left bg-bottom opacity-0 animate-[show-2_16s_linear_infinite]" >
-            <img src="../public/img/bg-3.png" alt="" class="w-full h-full absolute top-0 left-0 object-cover origin-top-right bg-bottom opacity-0 animate-[show-3_16s_linear_infinite]" >
         </div>
-        <!-- end background -->
-        <div class="mt-[-180px] relative text-white z-10 lg:mt-[-160px]">
-            <div class="flex flex-col items-center ">
-                <span class="block text-4xl uppercase mb-8 mx-8 self-stretch md:text-6xl">Foxy boutique</span>
-                <div class="container mx-auto xl:flex">
-                    <div class="bg-c-purple-light/80 rounded-3xl p-6 mx-8 self-stretch h-fit xl:sticky xl:top-24 xl:w-1/4">
-                        <div class="flex flex-col font-bold">
-                            <span class="text-4xl uppercase text-orange-400">Wen merch?!</span>
-                            <span class="text-lg font-sans mt-3">Foxy Merchandise is now available!</span>
-                        </div>
-                        <input type="checkbox" hidden name="" class="peer/more-merch" id="more-merch">
-                        <label for="more-merch" class="inline-block mt-3 font-sans text-lg border-2 px-3 py-1 rounded-xl text-orange-500 border-orange-500 peer-checked/more-merch:bg-orange-500 peer-checked/more-merch:text-white lg:hidden">Learn More</label>
-                        <div class="font-sans font-bold text-lg mt-3 hidden peer-checked/more-merch:block lg:block">
-                            <p class="mb-3">Prices and payments will be in USDC.</p>
-                            <p class="mb-3">Please note that while you will be required to enter your shipping particulars during the checkout, this information will be sent directly to the retailer handling the shipping. Famous Fox Federation will NEVER store your personal particulars.</p>
-                            <p class="mb-3">Merch provided by <a class="text-orange-500" href="" target="_blank">W3W</a>. Please contact <a class="text-orange-500" href="">support@null.com</a> for shipment related support.</p>
-                        </div>
-                    </div>
-                    <!-- ==SHOP ITEM CONTAINER== -->
-                    <div class="mx-10 grid grid-rows-1 mt-10 gap-8 select-none md:grid-cols-3 xl:w-3/4" id="shop-item-container"></div>
-                    <!-- END SHOP ITEM CONTAINER -->    
-                </div>
-            </div>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
     <div id="sticky-wrapper"></div>
-    <script class="data-shop">
+  </div>
+
+  <script class="data-shop">
     const dataShops = [
-        {   
-            id: 0,
-            name: "famous fox stickers",
-            price: 25,
-            description: "Feelin’ FOXY! Add some orange to your belongings with our 60-pack of stickers! Whether you're decorating your laptop, water bottle, or notebook, our stickers are the perfect way to rep the Foxes!",
-            image: "/public/img/shop/stickers.png",
+      {   
+          id: 0,
+          name: "famous fox stickers",
+          price: 25,
+          description: "Feelin’ FOXY! Add some orange to your belongings with our 60-pack of stickers! Whether you're decorating your laptop, water bottle, or notebook, our stickers are the perfect way to rep the Foxes!",
+          image: {
+            front: "/public/img/shop/stickers.png",
+            back: "",
+          },
+      },
+      {
+          id: 1,
+          name: "cofffee",
+          price: 20,
+          description: "The perfect start to your day, sure... and also pretty darn good at any time of day. Famous Fox Federation Cofffee is a joyful medium roast created in partnership with fox holders White Duck Espresso in Tampa Bay, FL. Equally exciting as drip coffee or espresso.",
+          image: {
+            front: "/public/img/shop/cofffee.png",
+            back: "",
+          }
+      },
+      {
+          id: 2,
+          name: "famos fox bundle",
+          price: 20,
+          description: `Famous Fox Holiday Bundle with only 50 sets available! The bundle includes:
+                  1. 100% Wool T1 Beanie 
+                  2. Embroidery patches (FFF and Famous Fox Federation)
+                  3. Vinyl stickers x 5
+                  4. Limited edition FOXY coins x 5`,
+          image: {
+            front: "/public/img/shop/hat.png",
+            back: "",
+          }
+      },
+      {
+          id: 3,
+          name: "Famous Fox Mug",
+          price: 20,
+          description: `Start your morning off famously with a Hyblinxx x FFF Collab featuring orange accents and the ability to store liquids of various temperatures. Big giant GM to start NFT-themed conversations first thing in the morning. It'll go over great. Ceramic mug. Microwave friendly.`,
+          image: "/public/img/shop/cup-front.png",
+          twoSided: true,
+          image: {
+            front: "/public/img/shop/cup-front.png",
+            back: "/public/img/shop/cup-back.png",
+          }
+      },
+      {
+          id: 4,
+          name: "Famous Fox Cap",
+          price: 35,
+          description: `Touching some grass? Throw on the signature Famous Fox cap and prevent the sun from damaging your pasty skin! Enjoy the awkward conversations when people ask about this eye-catching hat and you have to tell them it's from an NFT project! Oh yeah, its 100% cotton, featuring embroidered logos on the front and back.`,
+          image: "/public/img/shop/cap-front.png",
+          twoSided: true,
+          image: {
+            front: "/public/img/shop/cap-front.png",
+            back: "/public/img/shop/cap-back.png",
+          }
+      },
+      {
+          id: 5,
+          name: "Famous Fox T-shirt 1",
+          price: 35,
+          description: `Turnt up for the get down, vibe like you mean it with this Hyblinxx-illustrated fox. Kicks an sweatband on point. It's a bop; get loud. Short sleeve cotton jersey t-shirt, regular fit.`,
+          image: {
+            front: "/public/img/shop/shirt-front.png",
+            back: "/public/img/shop/shirt-back.png",
+          },
+          twoSided: true,
+          sizes: ['s', "m", "l", "xl", "2xl", "3xl"],
+          colors: ["white", "beige"],                 
+      },
+      {
+          id: 6,
+          name: "Famous Fox T-shirt 2",
+          price: 35,
+          description: `Created by the infamous SCUM, orangify your drip with the most famous mutant you'll ever meet. Halo on, this one'll fox you up. Short sleeve cotton jersey t-shirt, regular fit.`,
+          image: {
+            front: "/public/img/shop/shirt-green-front.png",
+            back: "/public/img/shop/shirt-green-back.png",
+          },
+          twoSided: true,
+          sizes: ['s', "m", "l", "xl", "2xl", "3xl"],
+          colors: ["green", "beige"],                 
 
-        },
-        {
-            id: 1,
-            name: "cofffee",
-            price: 20,
-            description: "The perfect start to your day, sure... and also pretty darn good at any time of day. Famous Fox Federation Cofffee is a joyful medium roast created in partnership with fox holders White Duck Espresso in Tampa Bay, FL. Equally exciting as drip coffee or espresso.",
-            image: "/public/img/shop/cofffee.png" 
-        },
-        {
-            id: 2,
-            name: "famos fox bundle",
-            price: 20,
-            description: `Famous Fox Holiday Bundle with only 50 sets available! The bundle includes:
-                    1. 100% Wool T1 Beanie 
-                    2. Embroidery patches (FFF and Famous Fox Federation)
-                    3. Vinyl stickers x 5
-                    4. Limited edition FOXY coins x 5`,
-            image: "/public/img/shop/hat.png" 
-        },
-        {
-            id: 3,
-            name: "Famous Fox Mug",
-            price: 20,
-            description: `Start your morning off famously with a Hyblinxx x FFF Collab featuring orange accents and the ability to store liquids of various temperatures. Big giant GM to start NFT-themed conversations first thing in the morning. It'll go over great. Ceramic mug. Microwave friendly.`,
-            image: "/public/img/shop/cup-front.png",
-            twoSIded: true,
-        },
-        {
-            id: 4,
-            name: "Famous Fox Cap",
-            price: 35,
-            description: `Touching some grass? Throw on the signature Famous Fox cap and prevent the sun from damaging your pasty skin! Enjoy the awkward conversations when people ask about this eye-catching hat and you have to tell them it's from an NFT project! Oh yeah, its 100% cotton, featuring embroidered logos on the front and back.`,
-            image: "/public/img/shop/cap-front.png",
-            twoSIded: true,
-        },
-        {
-            id: 5,
-            name: "Famous Fox T-shirt 1",
-            price: 35,
-            description: `Turnt up for the get down, vibe like you mean it with this Hyblinxx-illustrated fox. Kicks an sweatband on point. It's a bop; get loud. Short sleeve cotton jersey t-shirt, regular fit.`,
-            image: "/public/img/shop/shirt-front.png",
-            twoSIded: true,
-            sizes: ['s', "m", "l", "xl", "2xl", "3xl"],
-            colors: ["white", "beige"],                 
-        },
-        {
-            id: 6,
-            name: "Famous Fox T-shirt 2",
-            price: 35,
-            description: `Created by the infamous SCUM, orangify your drip with the most famous mutant you'll ever meet. Halo on, this one'll fox you up. Short sleeve cotton jersey t-shirt, regular fit.`,
-            image: "/public/img/shop/shirt-green-front.png",
-            twoSIded: true,
-            sizes: ['s', "m", "l", "xl", "2xl", "3xl"],
-            colors: ["green", "beige"],                 
+      },
+      {
+          id: 7,
+          name: "Famous Fox Hoodie",
+          price: 69,
+          description: `Here's one foxy hoodie. Politely grab attention with a subtle winking fox on the front and bold rep the fed with a purple shadowed fox and our name on the back. Successfully keeps you warm. 100% heavyweight cotton hoodie, with an embroidered logo on the front and a heat press FFF text logo.`,
+          image: {
+            front: "/public/img/shop/hoodie-front.png",
+            back: "/public/img/shop/hoodie-back.png",
+          },
+          twoSided: true,
+          sizes: ['s', "m", "l", "xl", "2xl", "3xl"],
+          colors: ["black","blue", "white"],                 
+      },
+      {
+          id: 8,
+          name: "LV Bag",
+          price: 2000,
+          description: `Here's one foxy LV. Politely grab attention with a subtle winking fox on the front and bold rep the fed with a purple shadowed fox and our name on the back. Successfully keeps you warm. 100% heavyweight cotton hoodie, with an embroidered logo on the front and a heat press FFF text logo.`,
+          image: {
+            front: "/public/img/shop/lv.webp",
+            back: "",
+          },
+      },
+      
+  ]        
+  </script>
 
-        },
-        {
-            id: 7,
-            name: "Famous Fox Hoodie",
-            price: 69,
-            description: `Here's one foxy hoodie. Politely grab attention with a subtle winking fox on the front and bold rep the fed with a purple shadowed fox and our name on the back. Successfully keeps you warm. 100% heavyweight cotton hoodie, with an embroidered logo on the front and a heat press FFF text logo.`,
-            image: "/public/img/shop/hoodie-front.png",
-            twoSIded: true,
-            sizes: ['s', "m", "l", "xl", "2xl", "3xl"],
-            colors: ["black","blue", "white"],                 
-        },
-        {
-            id: 8,
-            name: "LV Bag",
-            price: 2000,
-            description: `Here's one foxy LV. Politely grab attention with a subtle winking fox on the front and bold rep the fed with a purple shadowed fox and our name on the back. Successfully keeps you warm. 100% heavyweight cotton hoodie, with an embroidered logo on the front and a heat press FFF text logo.`,
-            image: "/public/img/shop/lv.webp",
-            twoSIded: true,                
-        },
-       
-    ]        
-    </script>
+  <script class="element">
+      const shopItemContainer = document.getElementById("shop-item-container");
+      const stickyWrapper = document.getElementById("sticky-wrapper")
+  </script>
 
-    <script class="element">
-        const shopItemContainer = document.getElementById("shop-item-container");
-        const stickyWrapper = document.getElementById("sticky-wrapper")
-    </script>
-    
-    <script class="component">
-        const Items = ({id, name, image, price, description}) => {
-            return `
-            <div class="cursor-pointer flex flex-col items-center relative w-full group/item w-full" data-type="items" data-id="${id}">
-                <div class="absolute w-full aspect-square opacity-70 group-hover/item:opacity-100 transition-all duration-500">
-                    <img src="../public/img/shop/merch-bg.png" alt="" class="w-full h-full object-cover">
-                </div>
-                <img src="..${image}" class="z-10 w-full aspect-square" alt="">
-                <div class="flex flex-col items-center text-2xl z-10 group">
-                    <span class="text-center text-white capitalize md:text-transparent md:group-hover/item:group-[]:text-white">${name}</span>
-                    <span class="text-center text-orange-500 md:text-transparent md:group-hover/item:group-[]:text-orange-500">$${price}</span>
-                </div>
-            </div>
-            `
-        };
-        const DetailItems = ({name, image, price, description, sizesHtml= "", colorsHtml = ""}) => {
-            return `
-            <div class="fullscreen bg-black/60 backdrop-blur flex justify-center items-center" onclick="this.remove()">
-                <label class="z-50" onclick="this.parentElement.remove()">
-                    <svg class="fixed top-5 right-5 text-white hover:text-orange-500 fill-current w-10 cursor-pointer" viewBox="0 0 512 512">
-                        <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z">
-                    </path>
-                </svg>
-                </label>
-                <div class="bg-c-purple w-full max-w-screen-lg md:mx-8 h-screen md:h-[66vh] md:rounded-3xl overflow-hidden" onclick="((e)=>(e.stopPropagation()))(event);">
-                    <div class="md:flex md:p-4 h-full overflow-y-auto">
-                        <div class="relative md:w-1/2">
-                            <div class="absolute w-full aspect-square opacity-70">
-                                <img src="../public/img/shop/merch-bg.png" alt="">
-                            </div>
-                            <div>
-                                <img class="z-[1] relative aspect-square"  src="../${image}" alt="">
-                            </div>
-                            <div class="flex justify-center gap-2 font-lilita-one text-white">
-                                <label class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full" for="front">Front</label>
-                                <label class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full" for="back">Back</label>
-                            </div>
-                        </div>
-                        <div class="p-4 md:w-1/2">
-                            <div class="text-4xl font-lilita-one flex flex-col mb-6">
-                                <span class="text-white">${name}</span>
-                                <span class="text-orange-500">$${price}</span>
-                            </div>
-                            <!-- ==size== -->
-                            <div class="text-white mb-4 ${sizesHtml ? "" : "hidden"}">
-                                <span class="text-xl font-bold mb-2 block">Sizes</span>
-                                <div class="flex gap-2">
-                                    ${sizesHtml}
-                                </div>
-                            </div>
-                            <!-- end size -->
-                            <!-- ==colors== -->
-                            <div class="text-white mb-4 ${colorsHtml ? "" : "hidden"}">
-                                <span class="text-xl font-bold mb-2 block">Colors</span>
-                                <div class="flex gap-2">
-                                    ${colorsHtml}
-                                </div>
-                            </div>
-                            <!-- end color -->
-                            <div class="text-white">
-                                <span class="text-xl font-bold mb-2 block">Description</span>
-                                <p>${description}</p>
-                            </div>
-                            <div class="flex justify-center mt-6">
-                                <button class="bg-orange-400 text-white mx-6 w-full font-lilita-one uppercase text-lg p-3 rounded-full md:mx-0 md:py-4">
-                                    Add to card
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            `
-        };
-        const Sizes = (sizes = []) => {
-            const html = []
-            sizes.map(size => {
-                html.push(`
-                <div class="">
-                    <input type="radio" class="peer/s" hidden name="size" id="size-${size}">
-                    <label for="size-${size}" class="uppercase min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/s:text-white peer-checked/s:bg-orange-400">
-                        <span>${size}</span>
-                    </label>
-                </div>`
-                )  
-                return html;
-            })
-            return html.join("")
-        };
-        const Colors = (colors = []) => {
-            const html = []
-            colors.map(color => {
-                html.push(`
-                <div class="">
-                    <input type="radio" class="peer/c" hidden name="colors" id="color-${color}">
-                    <label for="color-${color}" class="capitalize min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/c:text-white peer-checked/c:bg-orange-400">
-                        <span>${color}</span>
-                    </label>
-                </div>`
-                )  
-                return html;
-            })
-            return html.join("")
-        };
+  <script class="component">
+      const Items = ({id, name, image, price, description}) => {
+          return `
+          <div class="cursor-pointer flex flex-col items-center relative w-full group/item w-full" data-type="items" data-id="${id}">
+              <div class="absolute w-full aspect-square opacity-70 group-hover/item:opacity-100 transition-all duration-500">
+                  <img src="../public/img/shop/merch-bg.png" alt="" class="w-full h-full object-cover">
+              </div>
+              <img src="..${image.front}" onerror="this.onerror=null;this.src='../public/img/logo.svg'" class="z-10 w-full aspect-square" alt="">
+              <div class="flex flex-col items-center text-2xl z-10 group">
+                  <span class="text-center text-white capitalize md:text-transparent md:group-hover/item:group-[]:text-white">${name}</span>
+                  <span class="text-center text-orange-500 md:text-transparent md:group-hover/item:group-[]:text-orange-500">$${price}</span>
+              </div>
+          </div>
+          `
+      };
+      const DetailItems = ({name, imageFront, imageBack, price, twoSided = false, description, sizesHtml= "", colorsHtml = ""}) => {
+          return `
+          <div class="fullscreen bg-black/60 backdrop-blur flex justify-center items-center" onclick="this.remove()">
+              <label class="z-50" onclick="this.parentElement.remove()">
+                  <svg class="fixed top-5 right-5 text-white hover:text-orange-500 fill-current w-10 cursor-pointer" viewBox="0 0 512 512">
+                      <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z">
+                  </path>
+              </svg>
+              </label>
+              <div class="bg-c-purple w-full max-w-screen-lg md:mx-8 h-screen md:h-[66vh] md:rounded-3xl overflow-hidden" id="detail-wrapper" onclick="((e)=>(e.stopPropagation()))(event);">
+                  <div class="md:flex md:p-4 h-full overflow-y-auto">
+                      <div class="relative md:w-1/2">
+                          <div class="absolute w-full aspect-square opacity-70">
+                              <img src="../public/img/shop/merch-bg.png" alt="">
+                          </div>
+                          <div>
+                              <img class="z-[1] relative aspect-square" id="image-detail"  src="../${imageFront}" onerror="this.onerror=null;this.src='../public/img/logo.svg'" alt="nn">
+                          </div>
 
-    </script>
-    <script class="render-data-shop">
-        const html = []
-        dataShops.map(item => {
-            html.push(Items(item));
-            return html;
+                          ${
+                            twoSided
+                            ? `<div class="flex justify-center gap-2 font-lilita-one text-white">
+                                  <button data-type-handle="changeSides" data-type="front" data-img="${imageFront}" class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full">Front</button>
+                                  <button data-type-handle="changeSides" data-type="back" data-img="${imageBack}" class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full">Back</button>
+                                </div>`
+                            : ""
+                          }
+                      </div>
+                      <div class="p-4 md:w-1/2">
+                          <div class="text-4xl font-lilita-one flex flex-col mb-6">
+                              <span class="text-white">${name}</span>
+                              <span class="text-orange-500">$${price}</span>
+                          </div>
+                          <!-- ==size== -->
+                          <div class="text-white mb-4 ${sizesHtml ? "" : "hidden"}">
+                              <span class="text-xl font-bold mb-2 block">Sizes</span>
+                              <div class="flex gap-2">
+                                  ${sizesHtml}
+                              </div>
+                          </div>
+                          <!-- end size -->
+                          <!-- ==colors== -->
+                          <div class="text-white mb-4 ${colorsHtml ? "" : "hidden"}">
+                              <span class="text-xl font-bold mb-2 block">Colors</span>
+                              <div class="flex gap-2">
+                                  ${colorsHtml}
+                              </div>
+                          </div>
+                          <!-- end color -->
+                          <div class="text-white">
+                              <span class="text-xl font-bold mb-2 block">Description</span>
+                              <p>${description}</p>
+                          </div>
+                          <div class="flex justify-center mt-6">
+                              <button data-type-handle="addToCart" class="bg-orange-400 text-white mx-6 w-full font-lilita-one uppercase text-lg p-3 rounded-full md:mx-0 md:py-4">
+                                  Add to card
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>`
+      };
+      const Sizes = (sizes = []) => {
+          const html = []
+          sizes.map(size => {
+              html.push(`
+              <div class="">
+                  <input type="radio" class="peer/s" hidden name="size" id="size-${size}">
+                  <label for="size-${size}" class="uppercase min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/s:text-white peer-checked/s:bg-orange-400">
+                      <span>${size}</span>
+                  </label>
+              </div>`
+              )  
+              return html;
+          })
+          return html.join("")
+      };
+      const Colors = (colors = []) => {
+          const html = []
+          colors.map(color => {
+              html.push(`
+              <div class="">
+                  <input type="radio" class="peer/c" hidden name="colors" id="color-${color}">
+                  <label for="color-${color}" class="capitalize min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/c:text-white peer-checked/c:bg-orange-400">
+                      <span>${color}</span>
+                  </label>
+              </div>`)  
+              return html;
+          })
+          return html.join("")
+      };
+  </script>
+
+  <script class="render-data-shop">
+      const html = []
+      dataShops.map(item => {
+          html.push(Items(item));
+          return html;
+      })
+      shopItemContainer.innerHTML = html.join("")
+  </script>
+
+  <script class="handle-item-shop">
+    shopItemContainer.addEventListener("click", (e) => {
+      const items = e.target.closest("[ data-type='items']");
+      if (!items) return;
+      const renderDetailItems = () =>
+        new Promise((resolve, reject) => {
+          const id = items.dataset.id;
+          const dataItem = dataShops.find((item) => item.id == id);
+          const { sizes, colors, image } = dataItem;
+          const {front: imageFront, back: imageBack} = image;
+          const sizesHtml = Sizes(sizes);
+          const colorsHtml = Colors(colors);
+          const html = DetailItems({ ...dataItem, imageFront, imageBack , sizesHtml, colorsHtml });
+          stickyWrapper.innerHTML = html;
+          resolve("RENDER ITEMS SUCCESS!");
+        });
+
+      const handleDetailItems = (async () => {
+        const rendered = await renderDetailItems();
+
+        const buttonAdd = document.querySelector("[data-button='add-to-card']");
+        const detailWrapper = document.getElementById("detail-wrapper")
+
+        detailWrapper.addEventListener("click", (e) => {
+          const typeHandleElement = e.target.closest("[data-type-handle]");
+          if(!typeHandleElement) return;
+          const typeHandle = typeHandleElement.dataset.typeHandle;
+          const actions = {
+            addToCart() {
+              console.log(detailWrapper);
+            },
+            changeSides() {
+              const src = typeHandleElement.dataset.img
+              const image = detailWrapper.querySelector("#image-detail")
+              image.src = src
+            }
+          }
+          actions[typeHandle]?.();
         })
-        shopItemContainer.innerHTML = html.join("")
-    </script>
+      })();
+    });
+  </script>
 
-    <script class="handle-item-shop">
-        shopItemContainer.addEventListener("click", (e) => {
-            const items = e.target.closest("[ data-type='items']")
-            if(!items) return;
-            const id = items.dataset.id;
-            const dataItem = dataShops.find(item => item.id == id);
-            const {sizes, colors} = dataItem;
-            const sizesHtml = Sizes(sizes);
-            const colorsHtml = Colors(colors);
-            const html = DetailItems({...dataItem, sizesHtml, colorsHtml});
-            stickyWrapper.innerHTML = html
-        })
-    </script>
 </body>
 </html>
