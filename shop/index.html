@@ -261,11 +261,11 @@
               <!-- END DETAIL NAV -->
             </ul>
             <div class="flex justify-center md:h-full">
-              <button class="uppercase rounded-full mx-3 py-4 bg-orange-400 text-lg font-lilita-one w-full h-fit justify-center text-white flex md:text-base md:w-fit md:shrink-0 md:py-0 md:h-full md:flex md:items-center px-2">
-                <span class="text-slate-200 mr-2 md:hidden">
-                  <i class="fa-solid fa-plug"></i>
+              <button class="uppercase rounded-full mx-3 px-6 py-4 bg-orange-400 text-lg font-lilita-one w-full h-fit justify-center text-white flex md:text-base md:w-fit md:shrink-0 md:py-0 md:h-full md:flex md:items-center">
+                <span class="text-slate-200 mr-2">
+                  <i class="fa-solid fa-bag-shopping"></i>
                 </span>
-                <span class="whitespace-normal">Connect wallet</>
+                <span class="whitespace-normal">Cart</>
               </button>
             </div>
             <div class="md:hidden">
@@ -323,10 +323,29 @@
         </div>
       </div>
     </main>
-    <div id="sticky-wrapper"></div>
+    <div id="sticky-wrapper">
+      <!-- <div data-status="success" class="fixed top-10 left-1/2 -translate-x-1/2 z-[52] bg-[#faf4ff] text-[#faf4ff] data-[status='success']:text-green-500 data-[status='error']:text-red-500 data-[status='warring']:text-yellow-500 py-2 px-3 pr-6 flex items-star rounded-4xl ">
+        <label onclick="this.parentElement.remove()">
+          <svg class="text-stone-300 hover:text-orange-500 fill-current w-6 cursor-pointer absolute top-0 right-0 translate-x-full" viewBox="0 0 512 512">
+            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z">
+            </path>
+          </svg>
+        </label>
+        
+        
+        <div class="h-10 aspect-square shrink-0 rounded-full mr-2  bg-orange-400 flex justify-center items-center border-4 border-white shadow-md shadow-">
+          <img class="h-[60%] aspect-square" src="../public/img/logo.svg" alt="">
+        </div>
+        <div class="flex items-center">
+          <span id="content-toast">
+            Please note that while 
+          </span>
+        </div>
+      </div> -->
+    </div>
   </div>
 
-  <script class="data-shop">
+  <script id="script__data-shop">
     const dataShops = [
       {   
           id: 0,
@@ -440,12 +459,12 @@
   ]        
   </script>
 
-  <script class="element">
+  <script id="script__element">
       const shopItemContainer = document.getElementById("shop-item-container");
       const stickyWrapper = document.getElementById("sticky-wrapper")
   </script>
 
-  <script class="component">
+  <script id="script__component">
       const Items = ({id, name, image, price, description}) => {
           return `
           <div class="cursor-pointer flex flex-col items-center relative w-full group/item w-full" data-type="items" data-id="${id}">
@@ -460,17 +479,17 @@
           </div>
           `
       };
-      const DetailItems = ({name, imageFront, imageBack, price, twoSided = false, description, sizesHtml= "", colorsHtml = ""}) => {
+      const DetailItems = ({id = null, name, imageFront, imageBack, price, twoSided = false, description, sizesHtml= "", colorsHtml = ""}) => {
           return `
-          <div class="fullscreen bg-black/60 backdrop-blur flex justify-center items-center" onclick="this.remove()">
+          <div class="fullscreen  bg-black/60 backdrop-blur flex justify-center items-center" onclick="this.remove()">
               <label class="z-50" onclick="this.parentElement.remove()">
                   <svg class="fixed top-5 right-5 text-white hover:text-orange-500 fill-current w-10 cursor-pointer" viewBox="0 0 512 512">
                       <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z">
                   </path>
               </svg>
               </label>
-              <div class="bg-c-purple w-full max-w-screen-lg md:mx-8 h-screen md:h-[66vh] md:rounded-3xl overflow-hidden" id="detail-wrapper" onclick="((e)=>(e.stopPropagation()))(event);">
-                  <div class="md:flex md:p-4 h-full overflow-y-auto">
+              <div data-id="${id}" class="bg-c-purple w-full max-w-screen-lg md:mx-8 h-screen md:h-[66vh] md:rounded-3xl overflow-hidden" id="detail-wrapper" onclick="((e)=>(e.stopPropagation()))(event);">
+                  <div class="md:flex md:p-4 h-full overflow-y-auto scroll-hidden">
                       <div class="relative md:w-1/2">
                           <div class="absolute w-full aspect-square opacity-70">
                               <img src="../public/img/shop/merch-bg.png" alt="">
@@ -482,8 +501,8 @@
                           ${
                             twoSided
                             ? `<div class="flex justify-center gap-2 font-lilita-one text-white">
-                                  <button data-type-handle="changeSides" data-type="front" data-img="${imageFront}" class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full">Front</button>
-                                  <button data-type-handle="changeSides" data-type="back" data-img="${imageBack}" class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full">Back</button>
+                                  <button data-type-handle="changeSides" data-type="front" data-img="${imageFront}" class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full [&.active]:bg-c-purple-light active">Front</button>
+                                  <button data-type-handle="changeSides" data-type="back" data-img="${imageBack}" class="cursor-pointer px-4 py-1 hover:bg-c-purple-light/40 rounded-full [&.active]:bg-c-purple-light">Back</button>
                                 </div>`
                             : ""
                           }
@@ -511,11 +530,11 @@
                           <!-- end color -->
                           <div class="text-white">
                               <span class="text-xl font-bold mb-2 block">Description</span>
-                              <p>${description}</p>
+                              <p class="font-sans">${description}</p>
                           </div>
                           <div class="flex justify-center mt-6">
                               <button data-type-handle="addToCart" class="bg-orange-400 text-white mx-6 w-full font-lilita-one uppercase text-lg p-3 rounded-full md:mx-0 md:py-4">
-                                  Add to card
+                                  Add to cart
                               </button>
                           </div>
                       </div>
@@ -528,8 +547,8 @@
           sizes.map(size => {
               html.push(`
               <div class="">
-                  <input type="radio" class="peer/s" hidden name="size" id="size-${size}">
-                  <label for="size-${size}" class="uppercase min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/s:text-white peer-checked/s:bg-orange-400">
+                  <input type="radio" class="peer/s" hidden name="size" value="${size}" id="size-${size}">
+                  <label for="size-${size}" class="font-sans uppercase min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/s:text-white peer-checked/s:bg-orange-400 hover:border-orange-200 hover:text-orange-200">
                       <span>${size}</span>
                   </label>
               </div>`
@@ -543,8 +562,8 @@
           colors.map(color => {
               html.push(`
               <div class="">
-                  <input type="radio" class="peer/c" hidden name="colors" id="color-${color}">
-                  <label for="color-${color}" class="capitalize min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/c:text-white peer-checked/c:bg-orange-400">
+                  <input type="radio" class="peer/c" hidden name="color" value="${color}" id="color-${color}">
+                  <label for="color-${color}" class="font-sans capitalize min-w-6 h-6 px-2 border-2 inline-grid place-content-center rounded-md border-orange-400 text-orange-400 peer-checked/c:text-white peer-checked/c:bg-orange-400 hover:border-orange-200 hover:text-orange-200">
                       <span>${color}</span>
                   </label>
               </div>`)  
@@ -552,9 +571,34 @@
           })
           return html.join("")
       };
+      const Toast = ({status="success", message}) => {
+        const html = `
+        <div data-status="${status}" id="toast" class="fixed top-10 left-1/2 -translate-x-1/2 z-[52] bg-[#faf4ff] text-[#faf4ff] data-[status='success']:text-green-500 data-[status='error']:text-red-500 data-[status='warring']:text-yellow-500 py-2 px-3 pr-6 flex items-star rounded-4xl ">
+          <label onclick="this.parentElement.remove()">
+            <svg class="text-stone-300 hover:text-orange-500 fill-current w-6 cursor-pointer absolute top-0 right-0 translate-x-full" viewBox="0 0 512 512">
+              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z">
+              </path>
+            </svg>
+          </label>
+          
+          
+          <div class="h-10 aspect-square shrink-0 rounded-full mr-2  bg-orange-400 flex justify-center items-center border-4 border-white shadow-md shadow-">
+            <img class="h-[60%] aspect-square" src="../public/img/logo.svg" alt="">
+          </div>
+          <div class="flex items-center">
+            <span id="content-toast">
+              ${message}
+            </span>
+          </div>
+        </div>
+        `
+        const div = document.createElement("div");
+        div.innerHTML = html;
+        return div.firstElementChild
+      }
   </script>
 
-  <script class="render-data-shop">
+  <script id="script__render-data-shop">
       const html = []
       dataShops.map(item => {
           html.push(Items(item));
@@ -563,7 +607,11 @@
       shopItemContainer.innerHTML = html.join("")
   </script>
 
-  <script class="handle-item-shop">
+  <script id="script__data-cart">
+    const dataCart = [];
+  </script>
+
+  <script id="script__handle-item-shop">
     shopItemContainer.addEventListener("click", (e) => {
       const items = e.target.closest("[ data-type='items']");
       if (!items) return;
@@ -576,28 +624,58 @@
           const sizesHtml = Sizes(sizes);
           const colorsHtml = Colors(colors);
           const html = DetailItems({ ...dataItem, imageFront, imageBack , sizesHtml, colorsHtml });
-          stickyWrapper.innerHTML = html;
+
+          const div = document.createElement("div");
+          div.innerHTML = html
+          console.log(div.firstElementChild);
+          stickyWrapper.appendChild(div.firstElementChild);
           resolve("RENDER ITEMS SUCCESS!");
         });
 
       const handleDetailItems = (async () => {
         const rendered = await renderDetailItems();
-
         const buttonAdd = document.querySelector("[data-button='add-to-card']");
         const detailWrapper = document.getElementById("detail-wrapper")
-
         detailWrapper.addEventListener("click", (e) => {
           const typeHandleElement = e.target.closest("[data-type-handle]");
           if(!typeHandleElement) return;
           const typeHandle = typeHandleElement.dataset.typeHandle;
           const actions = {
             addToCart() {
-              console.log(detailWrapper);
+              const id = detailWrapper.dataset.id;
+              const itemAddCart = dataShops.find(item => item.id === parseInt(id));
+              const {image: {front: imageFront, back}, price, name} = itemAddCart;
+              const itemCart = {id, image: imageFront, price, name};
+              const isHasSize = Object.hasOwnProperty.call(itemAddCart, "sizes");
+              const isHasColor = Object.hasOwnProperty.call(itemAddCart, "colors");
+              if(isHasSize) {
+                const size =  detailWrapper.querySelector("[name='size']:checked")?.value;
+                if(!size) {
+                  stickyWrapper.querySelector("#toast")?.remove()
+                  const toast =  Toast({status: "error",message: "Choose size please!"})
+                  stickyWrapper.appendChild(toast)
+                  return;
+                } 
+                itemCart.size = size
+              };
+              if(isHasColor) {
+                const color =  detailWrapper.querySelector("[name='color']:checked")?.value;
+                if(!color) {
+                  stickyWrapper.querySelector("#toast")?.remove()
+                  const toast =  Toast({status: "error",message: "Choose color please!"})
+                  stickyWrapper.appendChild(toast)
+                  return;
+                }
+                itemCart.color = color
+              }
+              
             },
             changeSides() {
-              const src = typeHandleElement.dataset.img
-              const image = detailWrapper.querySelector("#image-detail")
-              image.src = src
+              const src = typeHandleElement.dataset.img;
+              const image = detailWrapper.querySelector("#image-detail");
+              image.src = src;
+              document.querySelector("[data-type-handle].active")?.classList.remove("active")
+              typeHandleElement.classList.add("active")
             }
           }
           actions[typeHandle]?.();
