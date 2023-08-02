@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="../public/font/fontawesome-free-6.4.0-web/css/all.min.css"/>
   <!-- end icon -->
   </head>
-<body>
-  <div class="bg-c-purple font-lilita-one selection:text-white selection:bg-c-pick-dark ">
+<body class="bg-c-purple">
+  <div class="font-lilita-one selection:text-white selection:bg-c-pick-dark ">
       <!-- ==NAV TOP== -->
     <nav class="fixed top-0 left-0 right-0 z-[11]">
       <div class="h-8 bg-c-black overflow-hidden w-full">
@@ -324,24 +324,6 @@
       </div>
     </main>
     <div id="sticky-wrapper">
-      <!-- <div data-status="success" class="fixed top-10 left-1/2 -translate-x-1/2 z-[52] bg-[#faf4ff] text-[#faf4ff] data-[status='success']:text-green-500 data-[status='error']:text-red-500 data-[status='warring']:text-yellow-500 py-2 px-3 pr-6 flex items-star rounded-4xl ">
-        <label onclick="this.parentElement.remove()">
-          <svg class="text-stone-300 hover:text-orange-500 fill-current w-6 cursor-pointer absolute top-0 right-0 translate-x-full" viewBox="0 0 512 512">
-            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z">
-            </path>
-          </svg>
-        </label>
-        
-        
-        <div class="h-10 aspect-square shrink-0 rounded-full mr-2  bg-orange-400 flex justify-center items-center border-4 border-white shadow-md shadow-">
-          <img class="h-[60%] aspect-square" src="../public/img/logo.svg" alt="">
-        </div>
-        <div class="flex items-center">
-          <span id="content-toast">
-            Please note that while 
-          </span>
-        </div>
-      </div> -->
     </div>
   </div>
 
@@ -572,6 +554,9 @@
           return html.join("")
       };
       const Toast = ({status="success", message}) => {
+        setTimeout(() => {
+          document.querySelector("#toast")?.remove();
+        }, 3000);
         const html = `
         <div data-status="${status}" id="toast" class="fixed top-10 left-1/2 -translate-x-1/2 z-[52] bg-[#faf4ff] text-[#faf4ff] data-[status='success']:text-green-500 data-[status='error']:text-red-500 data-[status='warring']:text-yellow-500 py-2 px-3 pr-6 flex items-star rounded-4xl ">
           <label onclick="this.parentElement.remove()">
@@ -626,8 +611,7 @@
           const html = DetailItems({ ...dataItem, imageFront, imageBack , sizesHtml, colorsHtml });
 
           const div = document.createElement("div");
-          div.innerHTML = html
-          console.log(div.firstElementChild);
+          div.innerHTML = html;
           stickyWrapper.appendChild(div.firstElementChild);
           resolve("RENDER ITEMS SUCCESS!");
         });
@@ -635,7 +619,7 @@
       const handleDetailItems = (async () => {
         const rendered = await renderDetailItems();
         const buttonAdd = document.querySelector("[data-button='add-to-card']");
-        const detailWrapper = document.getElementById("detail-wrapper")
+        const detailWrapper = document.getElementById("detail-wrapper");
         detailWrapper.addEventListener("click", (e) => {
           const typeHandleElement = e.target.closest("[data-type-handle]");
           if(!typeHandleElement) return;
@@ -651,31 +635,32 @@
               if(isHasSize) {
                 const size =  detailWrapper.querySelector("[name='size']:checked")?.value;
                 if(!size) {
-                  stickyWrapper.querySelector("#toast")?.remove()
+                  stickyWrapper.querySelector("#toast")?.remove();
                   const toast =  Toast({status: "error",message: "Choose size please!"})
-                  stickyWrapper.appendChild(toast)
+                  stickyWrapper.appendChild(toast);
                   return;
                 } 
-                itemCart.size = size
+                itemCart.size = size;
               };
               if(isHasColor) {
                 const color =  detailWrapper.querySelector("[name='color']:checked")?.value;
                 if(!color) {
-                  stickyWrapper.querySelector("#toast")?.remove()
-                  const toast =  Toast({status: "error",message: "Choose color please!"})
-                  stickyWrapper.appendChild(toast)
+                  stickyWrapper.querySelector("#toast")?.remove();
+                  const toast =  Toast({status: "error",message: "Choose color please!"});
+                  stickyWrapper.appendChild(toast);
                   return;
                 }
                 itemCart.color = color
               }
-              
+              dataCart.push(itemCart)
+              console.log(dataCart);
             },
             changeSides() {
               const src = typeHandleElement.dataset.img;
               const image = detailWrapper.querySelector("#image-detail");
               image.src = src;
-              document.querySelector("[data-type-handle].active")?.classList.remove("active")
-              typeHandleElement.classList.add("active")
+              document.querySelector("[data-type-handle].active")?.classList.remove("active");
+              typeHandleElement.classList.add("active");
             }
           }
           actions[typeHandle]?.();
